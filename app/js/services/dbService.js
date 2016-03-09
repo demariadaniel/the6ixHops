@@ -1,13 +1,11 @@
-(function(){
-
 	angular
 		.module('app')
 		.service('dbService', dbService);
 
 	function dbService($http) {
 
-			this.allShops = {};
-			this.selectShop = {};
+			this.allItem = [];
+			this.selectItem = {};
 
 			this.getAll = getAll;
 			this.getOne = getOne;
@@ -15,10 +13,11 @@
 			this.put = put;
 			this.del = del;
 
-		function getAll(){
-			return $http.get('/all')
+		function getAll(addr){
+			console.log("getAll");
+			return $http.get(addr)
 				.then(function(res){
-					this.allShops = res.data;
+					this.allItem = res.data;
 					return res.data;
 				}, function(err){
 					console.log(err);
@@ -26,10 +25,10 @@
 			})
 		};
 
-		function getOne(id){
-			return $http.get('/'+id)
+		function getOne(addr, id){
+			return $http.get(addr+id)
 				.then(function(res){
-					this.allShops = res.data;
+					this.selectItem = res.data;
 					return res.data
 				}, function(err){
 					console.log(err);
@@ -37,17 +36,21 @@
 				})
 	 	};
 
-		function post(){
-			$http.post('/new', {name: "Ibby's Shop",address: "443 Equestria",rating: "5 stars"})
-				.then(function(){
+		function post(addr, newItem){
+			console.log("post");
+			return $http.post(addr, newItem)
+				.then(function(res){
+					console.log(res.data);
+					return res
 				}, function(err){
 					console.log(err);
 					return err
 				})
 		};
 
-		function put(id, update){
-			return $http.put('/'+id, update)
+		function put(addr, id, update){
+			console.log("put");
+			return $http.put(addr+id, update)
 				.then(function(res){
 					return res
 				}, function(err){
@@ -56,8 +59,9 @@
 				})
 		};
 
-		function del(id){
-			return $http.delete('/'+id)
+		function del(addr, id){
+			console.log("del");
+			return $http.delete(addr+id)
 				.then(function(res){
 					return res
 				}, function(err){
@@ -67,5 +71,3 @@
 		};
 
 	};
-
-}());
