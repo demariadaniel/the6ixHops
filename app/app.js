@@ -15,34 +15,39 @@ angular
 				templateUrl:'/partials/login.html',
 				controller: 'loginCtrl as ctrl'
 			})
-			.state('viewA',{
-				url:'/viewA',
-				templateUrl:'/partials/viewA.html',
-				controller: 'viewACtrl as ctrl'
+			.state('breweries',{
+				url:'/breweries',
+				templateUrl:'/partials/breweries.html',
+				controller: 'breweriesCtrl as ctrl'
 			})
-			.state('viewB',{
-				url:'/viewB',
-				templateUrl:'/partials/viewB.html',
-				controller: 'viewBCtrl as ctrl'
+			.state('adminPanel',{
+				url:'/adminPanel',
+				templateUrl:'/partials/adminPanel.html',
+				controller: 'adminPanelCtrl as ctrl'
 			})
-			.state('viewC',{
-				url:'/viewC',
-				templateUrl:'/partials/viewC.html',
-				controller: 'viewCCtrl as ctrl'
+			.state('beers',{
+				url:'/beers',
+				templateUrl:'/partials/beers.html',
+				controller: 'beersCtrl as ctrl'
 			})
-			.state('editA',{
-				url:'/editA',
-				templateUrl:'/partials/editA.html',
-				controller: 'editACtrl as ctrl'
+			.state('events',{
+				url:'/events',
+				templateUrl:'/partials/events.html',
+				controller: 'eventsCtrl as ctrl'
 			})
-			.state('editB',{
-				url:'/editB',
-				templateUrl:'/partials/editB.html',
-				controller: 'editBCtrl as ctrl'
+			.state('editBreweries',{
+				url:'/editBreweries',
+				templateUrl:'/partials/editBreweries.html',
+				controller: 'editBreweriesCtrl as ctrl'
 			})
-			.state('editC',{
-				url:'/editC',
-				templateUrl:'/partials/editC.html',
-				controller: 'editCCtrl as ctrl'
+			.state('editBeers',{
+				url:'/editBeers',
+				templateUrl:'/partials/editBeers.html',
+				controller: 'editBeersCtrl as ctrl'
+			})
+			.state('editEvents',{
+				url:'/editEvents',
+				templateUrl:'/partials/editEvents.html',
+				controller: 'editEventsCtrl as ctrl'
 			})
 });

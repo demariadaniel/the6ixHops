@@ -1,11 +1,11 @@
 angular
 	.module('app')
-	.controller('editACtrl', editACtrl);
+	.controller('loginCtrl', loginCtrl);
 
-	function editACtrl(dbService) {
+	function loginCtrl(dbService) {
 		var ctrl = this;
 
-			ctrl.testMsg = "editA";
+			ctrl.testMsg = "Login";
 			ctrl.dbService = dbService;
 
 			console.log(ctrl.testMsg);
