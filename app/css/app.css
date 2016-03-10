@@ -1,0 +1,15 @@
+/*background for the main home page slider images*/
+.fill {
+	height: 500px!important;
+
+}
+
+#carousel1{
+	background:  url(./../img/overlay.png) right bottom no-repeat, url(./../img/beer-foam.jpg) left bottom repeat ;
+	width: 100%;
+    height: 100%;
+    background-size: cover;
+
+    /*-webkit-clip-path: polygon(100% 0, 0 100%, 0 0);
+	clip-path: polygon(100% 0, 0 100%, 0 0);*/
+}

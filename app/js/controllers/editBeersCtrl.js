@@ -35,10 +35,10 @@ angular
 			});
 		};
 
-		function post(newUser){
+		function post(newBeer){
 			console.log("post");
 			var addr = '/api/beers/newBeer';
-			dbService.post(addr, newUser).then(function(res){
+			dbService.post(addr, newBeer).then(function(res){
 				if (res) {ctrl.getAll()}
 			})
 		};

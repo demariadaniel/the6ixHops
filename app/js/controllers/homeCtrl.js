@@ -9,6 +9,10 @@ angular
 			ctrl.dbService = dbService;
 
 			console.log(ctrl.testMsg);
+			// console.log(jQuery('.carousel'));
+		    jQuery('.carousel').carousel({
+		        interval: 5000 //changes the speed
+		    })
 	}
 
     
