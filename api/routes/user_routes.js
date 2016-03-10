@@ -33,7 +33,8 @@ router.post('/newUser', function(req, res){
         console.log(".post");
         var newUser = User({
         	name: req.body.name,
-        	email: req.body.email
+            email: req.body.email,
+        	password: req.body.password
         });
         newUser.save(function (err){
             if (err) {
@@ -52,6 +53,7 @@ router.put('/:id', function(req, res) {
 	var updateInfo = {
                 name: req.body.name,
                 email: req.body.email,
+                password: req.body.password,
     	};
     console.log(updateInfo);
     User.update(query,updateInfo,{},function(err,user){

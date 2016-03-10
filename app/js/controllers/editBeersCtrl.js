@@ -10,7 +10,17 @@ angular
 			ctrl.beers = [];
 			ctrl.update = {
 				name: "",
-				type: ""
+				brewery: "",
+				type: "",
+				image: "",
+				description: "",
+				sizes: "",
+				price: "",
+				strength: "",
+				available: "",
+				ingredients: "",
+				pairs_well: "",
+				draft: ""
 			}
 
 			ctrl.getAll = getAll;

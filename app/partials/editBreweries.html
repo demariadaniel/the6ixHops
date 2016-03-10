@@ -1,15 +1,24 @@
 <head>
-	<title>Beers</title>
+	<title>Breweries</title>
 </head>
 
 <body>
 
 <div>
-	{{ctrl.beers}}
+	{{ctrl.breweries}}
 </div>
 
-<p>Name: <input type="text" ng-model="ctrl.update.name"></p>
-<p>Type: <input type="text" ng-model="ctrl.update.type"></p>
+<p>Name: <input type="text" ng-model="ctrl.update.name"> (required)</p>
+<p>Address: <input type="text" ng-model="ctrl.update.address"> (required)</p>
+<p>Telephone: <input type="text" ng-model="ctrl.update.telephone"></p>
+<p>Email: <input type="text" ng-model="ctrl.update.email"></p>
+<p>Thumbnail Image: <input type="text" ng-model="ctrl.update.image_thumb"></p>
+<p>Main Image: <input type="text" ng-model="ctrl.update.image_main"></p>
+<p>Hours: <input type="text" ng-model="ctrl.update.hours"></p>
+<p>Social Media: <input type="text" ng-model="ctrl.update.social"></p>
+<p>Beers: <input type="text" ng-model="ctrl.update.beers"></p>
+<p>Events: <input type="text" ng-model="ctrl.update.events"></p>
+
 
 <p>Id: <input type="text" ng-model="ctrl.chooseId"></p>
 

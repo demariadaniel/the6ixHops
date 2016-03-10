@@ -32,8 +32,18 @@ router.get('/:id', function(req, res){
 router.post('/newBeer', function(req, res){
         console.log(".post");
         var newBeer = Beer({
-        	name: req.body.name,
-        	type: req.body.type
+                name: req.body.name,
+                brewery: req.body.brewery,
+                type: req.body.type,
+                image: req.body.image,
+                description: req.body.description,
+                sizes: req.body.sizes,
+                price: req.body.price,
+                strength: req.body.strength,
+                available: req.body.available,
+                ingredients: req.body.ingredients,
+                pairs_well: req.body.pairs_well,
+                draft: req.body.draft
         });
         newBeer.save(function (err){
             if (err) {
@@ -51,7 +61,17 @@ router.put('/:id', function(req, res) {
 	console.log("Update ID: " + identify);
 	var updateInfo = {
                 name: req.body.name,
+                brewery: req.body.brewery,
                 type: req.body.type,
+                image: req.body.image,
+                description: req.body.description,
+                sizes: req.body.sizes,
+                price: req.body.price,
+                strength: req.body.strength,
+                available: req.body.available,
+                ingredients: req.body.ingredients,
+                pairs_well: req.body.pairs_well,
+                draft: req.body.draft
     	};
     console.log(updateInfo);
     Beer.update(query,updateInfo,{},function(err,beer){
