@@ -20,9 +20,9 @@ angular
 				templateUrl:'/partials/breweries.html',
 				controller: 'breweriesCtrl as ctrl'
 			})
-			.state('adminPanel',{
-				url:'/adminPanel',
-				templateUrl:'/partials/adminPanel.html',
+			.state('usersadminPanel',{
+				url:'/useradminPanel',
+				templateUrl:'/partials/useradminPanel.html',
 				controller: 'adminPanelCtrl as ctrl'
 			})
 			.state('beers',{
