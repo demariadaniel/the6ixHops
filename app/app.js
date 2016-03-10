@@ -45,9 +45,9 @@ angular
 				templateUrl:'/partials/editBeers.html',
 				controller: 'editBeersCtrl as ctrl'
 			})
-			.state('editEvents',{
-				url:'/editEvents',
-				templateUrl:'/partials/editEvents.html',
-				controller: 'editEventsCtrl as ctrl'
+			.state('editUsers',{
+				url:'/editUsers',
+				templateUrl:'/partials/editUsers.html',
+				controller: 'editUsersCtrl as ctrl'
 			})
 });

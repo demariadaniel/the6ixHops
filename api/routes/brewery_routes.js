@@ -33,14 +33,22 @@ router.post('/newBrewery', function(req, res){
         console.log(".post");
         var newBrewery = Brewery({
         	name: req.body.name,
-        	address: req.body.address
+            address: req.body.address,
+            telephone: req.body.telephone,
+            email: req.body.email,
+            image_thumb: req.body.image_thumb,
+            image_main: req.body.image_main,
+            hours: req.body.hours,
+            social: req.body.social,
+            beers: req.body.beers,
+            events: req.body.events
         });
         newBrewery.save(function (err){
             if (err) {
                 console.log(err)
             } else {
                 console.log(newBrewery);
-                res.json('newBrewery');
+                res.send(true);
             }
         });
 });
@@ -50,8 +58,16 @@ router.put('/:id', function(req, res) {
     var query = { "_id": identify }
 	console.log("Update ID: " + identify);
 	var updateInfo = {
-                name: req.body.name,
-                address: req.body.address,
+            name: req.body.name,
+            address: req.body.address,
+            telephone: req.body.telephone,
+            email: req.body.email,
+            image_thumb: req.body.image_thumb,
+            image_main: req.body.image_main,
+            hours: req.body.hours,
+            social: req.body.social,
+            beers: req.body.beers,
+            events: req.body.events
     	};
     console.log(updateInfo);
     Brewery.update(query,updateInfo,{},function(err,brewery){

@@ -7,9 +7,38 @@ var BeerSchema = new Schema ({
 		required: true,
 		unique: true
 	},
+	brewery:{
+		type: String,
+	},
 	type: {
 		type: String,
-		required: true
+	},
+	image:{
+		type: String,
+	},
+	description:{
+		type: String,
+	},
+	sizes:{
+		type: String,
+	},
+	price:{
+		type: String,
+	},
+	strength:{
+		type: String,
+	},
+	available:{
+		type: String,
+	},
+	ingredients:{
+		type: String,
+	},
+	pairs_well:{
+		type: String,
+	},
+	draft:{
+		type: String,
 	}
 });
 

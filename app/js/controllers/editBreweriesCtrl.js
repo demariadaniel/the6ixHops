@@ -8,10 +8,18 @@ angular
 
 			ctrl.testMsg = "Login";
 			ctrl.dbService = dbService;
-			ctrl.users = [];
+			ctrl.breweries = [];
 			ctrl.update = {
 				name: "",
-				email: ""
+				address: "",
+				telephone: "",
+				email: "",
+				image_thumb: "",
+				image_main: "",
+				hours: "",
+				social: "",
+				beers: "",
+				events: ""
 			}
 
 			ctrl.getAll = getAll;
@@ -22,23 +30,23 @@ angular
 
 		function getAll(){
 			console.log("getAll");
-			var addr = '/api/users/allUsers';
+			var addr = '/api/breweries/allBreweries';
 			dbService.getAll(addr).then(function(res){
-					ctrl.users = res;
+					ctrl.breweries = res;
 			});
 		};
 
 		function getOne(id){
-			var addr = '/api/users/';
+			var addr = '/api/breweries/';
 			dbService.getOne(addr, id).then(function(res){
-					ctrl.users = [];
-					ctrl.users.push(res);
+					ctrl.breweries = [];
+					ctrl.breweries.push(res);
 			});
 		};
 
 		function post(newUser){
 			console.log("post");
-			var addr = '/api/users/newUser';
+			var addr = '/api/breweries/newBrewery';
 			dbService.post(addr, newUser).then(function(res){
 				if (res) {ctrl.getAll()}
 			})
@@ -46,7 +54,7 @@ angular
 
 		function put(id, update){
 			console.log('PUT request id: ' + id);
-			var addr = '/api/users/';
+			var addr = '/api/breweries/';
 			dbService.put(addr, id, update).then(function(res){
 			if (res) ctrl.getAll();
 		});
@@ -54,7 +62,7 @@ angular
 
 		function del(id){
 			console.log("del");
-			var addr = '/api/users/';
+			var addr = '/api/breweries/';
 			dbService.del(addr, id).then(function(res){
 			if (res) ctrl.getAll();
 		});
