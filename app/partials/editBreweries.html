@@ -7,25 +7,179 @@
 <div>
 	{{ctrl.breweries}}
 </div>
+<div class="container">
 
-<p>Name: <input type="text" ng-model="ctrl.update.name"> (required)</p>
-<p>Address: <input type="text" ng-model="ctrl.update.address"> (required)</p>
-<p>Telephone: <input type="text" ng-model="ctrl.update.telephone"></p>
-<p>Email: <input type="text" ng-model="ctrl.update.email"></p>
-<p>Thumbnail Image: <input type="text" ng-model="ctrl.update.image_thumb"></p>
-<p>Main Image: <input type="text" ng-model="ctrl.update.image_main"></p>
-<p>Hours: <input type="text" ng-model="ctrl.update.hours"></p>
-<p>Social Media: <input type="text" ng-model="ctrl.update.social"></p>
-<p>Beers: <input type="text" ng-model="ctrl.update.beers"></p>
-<p>Events: <input type="text" ng-model="ctrl.update.events"></p>
+<div class="row">
+        <div class="col-md-8">
+				<form name="sentMessage" id="contactForm" novalidate>
+		                    <div class="control-group form-group">
+		                        <div class="controls">
+		                        	<!-- angular input element -->
+		                        	<label>Full Brewery Name:</label>
+		                        	<!-- angular input element -->
+								<input type="text" class="form-control" id="name" required data-validation-required-message="Please enter your name." ng-model="ctrl.update.name">
+									<!-- angular input element -->
+									<p class="help-block"></p>
+								</div>
+							</div>
+
+							<div class="control-group form-group">
+		                        <div class="controls">
+		                        	<!-- angular input element -->
+		                        	<label>Address:</label>
+		                        	<!-- angular input element -->
+								<input type="text" class="form-control" id="Address" required data-validation-required-message="Please enter your address." ng-model="ctrl.update.address">
+									<!-- angular input element -->
+									<p class="help-block"></p>
+								</div>
+							</div>
+
+							<div class="control-group form-group">
+		                        <div class="controls">
+		                        	<!-- angular input element -->
+		                        	<label>Telephone:</label>
+		                        	<!-- angular input element -->
+								<input type="text" class="form-control" id="Telephone" required data-validation-required-message="Please enter your telephone number." ng-model="ctrl.update.telephone">
+									<!-- angular input element -->
+									<p class="help-block"></p>
+								</div>
+							</div>
+
+							<div class="control-group form-group">
+		                        <div class="controls">
+		                        	<!-- angular input element -->
+		                        	<label>Email:</label>
+		                        	<!-- angular input element -->
+								<input type="text" class="form-control" id="E-mail" required data-validation-required-message="Please enter your telephone number." ng-model="ctrl.update.email">
+									<!-- angular input element -->
+									<p class="help-block"></p>
+								</div>
+							</div>
+
+							<a href="http://phototrough.com/" target="_blank">Upload your image in the photo trough website (opens in new tab) and paste in the image form box.</a>
+
+						</br>
+					</br>
+
+							<div class="control-group form-group">
+		                        <div class="controls">
+		                        	<!-- angular input element -->
+		                        	<label>Thumbnail Image</label>
+		                        	<!-- angular input element -->
+								<input type="text" class="form-control" id="Thumbnail Image" required data-validation-required-message="Please enter your image." ng-model="ctrl.update.image_thumb">
+									<!-- angular input element -->
+									<p class="help-block"></p>
+								</div>
+							</div>
 
 
-<p>Id: <input type="text" ng-model="ctrl.chooseId"></p>
+							<div class="control-group form-group">
+		                        <div class="controls">
+		                        	<!-- angular input element -->
+		                        	<label>Main Image</label>
+		                        	<!-- angular input element -->
+								<input type="text" class="form-control" id="Main Brewery Shot" required data-validation-required-message="Please enter your image." ng-model="ctrl.update.image_main">
+									<!-- angular input element -->
+									<p class="help-block"></p>
+								</div>
+							</div>
 
-<button ng-click="ctrl.getAll()">Get All</button>
-<button ng-click="ctrl.getOne(ctrl.chooseId)">Get One</button>
-<button ng-click="ctrl.post(ctrl.update)">Post</button>
-<button ng-click="ctrl.put(ctrl.chooseId, ctrl.update)">Put</button>
-<button ng-click="ctrl.del(ctrl.chooseId)">Delete</button>
+							<div class="control-group form-group">
+		                        <div class="controls">
+		                        	<!-- angular input element -->
+		                        	<label>Opening Hours</label>
+		                        	<!-- angular input element -->
+								<input type="text" class="form-control" id="Opening Hours" required data-validation-required-message="Please enter your oepning times." ng-model="ctrl.update.hours">
+									<!-- angular input element -->
+									<p class="help-block"></p>
+								</div>
+							</div>
+
+
+							<div class="control-group form-group">
+		                        <div class="controls">
+		                        	<!-- angular input element -->
+		                        	<label><i class="fa fa-2x fa-twitter-square"></i></label>
+		                        	<!-- angular input element -->
+								</i><input type="text" class="form-control" id="Twitter" required data-validation-required-message="." ng-model="ctrl.update.twitter">
+									<!-- angular input element -->
+									<p class="help-block"></p>
+								</div>
+							</div>
+
+							<div class="control-group form-group">
+		                        <div class="controls">
+		                        	<!-- angular input element -->
+		                        	<label><i class="fa fa-2x fa-facebook-square"></i></label>
+		                        	<!-- angular input element -->
+								<input type="text" class="form-control" id="Facebook" required data-validation-required-message="." ng-model="ctrl.update.facebook">
+									<!-- angular input element -->
+									<p class="help-block"></p>
+								</div>
+							</div>
+
+							<div class="control-group form-group">
+		                        <div class="controls">
+		                        	<!-- angular input element -->
+		                        	<label><i class="fa fa-2x fa-instagram"></i></label>
+		                        	<!-- angular input element -->
+								<input type="text" class="form-control" id="Instagram" required data-validation-required-message="." ng-model="ctrl.update.instagram">
+									<!-- angular input element -->
+									<p class="help-block"></p>
+								</div>
+							</div>
+
+							<div class="control-group form-group">
+		                        <div class="controls">
+		                        	<!-- angular input element -->
+		                        	<label>Beers</label>
+		                        	<!-- angular input element -->
+								<input type="text" class="form-control" id="beers" required data-validation-required-message="." ng-model="ctrl.update.beers">
+									<!-- angular input element -->
+									<p class="help-block"></p>
+								</div>
+							</div>
+
+							<div class="control-group form-group">
+		                        <div class="controls">
+		                        	<!-- angular input element -->
+		                        	<label>Events</label>
+		                        	<!-- angular input element -->
+								<input type="text" class="form-control" id="Events" required data-validation-required-message="." ng-model="ctrl.update.events">
+									<!-- angular input element -->
+									<p class="help-block"></p>
+								</div>
+							</div>
+
+
+				</form>
+		</div>	
+</div>
+
+
+					<!-- angular form for input/edit -->
+
+					<!-- <p>Name:<input type="text" ng-model="ctrl.update.name"></p>
+					<p>Address: <input type="text" ng-model="ctrl.update.address"> (required)</p>
+					<p>Telephone: <input type="text" ng-model="ctrl.update.telephone"></p>
+					<p>Email: <input type="text" ng-model="ctrl.update.email"></p>
+					<p>Thumbnail Image: <input type="text" ng-model="ctrl.update.image_thumb"></p>
+					<p>Main Image: <input type="text" ng-model="ctrl.update.image_main"></p>
+					<p>Hours: <input type="text" ng-model="ctrl.update.hours"></p>
+					<p>Social Media: <input type="text" ng-model="ctrl.update.social"></p> -->
+						
+						<!-- @ DAN we need to add twitter, facebook and instagram input fields to the user and brewey schema -->
+
+					<!-- <p>Beers: <input type="text" ng-model="ctrl.update.beers"></p>
+					<p>Events: <input type="text" ng-model="ctrl.update.events"></p> -->
+
+					<!-- <button ng-click="ctrl.getAll()">Get All</button>
+					<button ng-click="ctrl.getOne(ctrl.chooseId)">Get One</button>
+					<button ng-click="ctrl.post(ctrl.update)">Post</button>
+					<button ng-click="ctrl.put(ctrl.chooseId, ctrl.update)">Put</button>
+					<button ng-click="ctrl.del(ctrl.chooseId)">Delete</button> -->
+
+		</div>			
+</div>	
 
 </body>

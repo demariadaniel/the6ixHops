@@ -105,9 +105,16 @@
 
 /*user info panel*/
 
-.thumbnail .caption{
+.background{
 	background-color: #000;
 
 }
 
+/*breweries form*/
+
+@media(max-width: 900px){
+    .form-control {
+        max-width: 150px;
+
+}
 
