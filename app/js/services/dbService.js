@@ -12,6 +12,7 @@
 			this.post = post;
 			this.put = put;
 			this.del = del;
+			this.login = login;
 
 		function getAll(addr){
 			console.log("getAll");
@@ -69,5 +70,16 @@
 						return err
 					})
 		};
+
+		function login(payload) {
+			return $http.post('api/users/login', payload)
+				.then(function(res){
+					console.log(res);
+					return res
+				}, function(err){
+					console.log(err);
+					return err
+				})
+		}
 
 	};
