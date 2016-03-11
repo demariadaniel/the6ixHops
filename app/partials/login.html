@@ -1,9 +1,21 @@
-<!DOCTYPE html>
-<html>
+
 <head>
-	<title></title>
+	<title>Login</title>
 </head>
 <body>
-{{ctrl.testMsg}}
+
+
+	
+	<h1>User login</h1>
+
+	<h2>{{ctrl.testMsg}}</h2>
+
+	<section class="form shell">
+		<form class="journalist">
+			<input ng-model="ctrl.user.email" type="email" name="email" placeholder="Email"><br>
+			<input ng-model="ctrl.user.password" type="text" name="password" placeholder="password">
+			<button ng-click="ctrl.login(ctrl.user)" type="submit">SIGN IN</button>
+		</form>
+	</section>
+
 </body>
-</html>
