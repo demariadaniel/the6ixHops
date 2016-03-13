@@ -3,19 +3,40 @@
 	<title>Login</title>
 </head>
 <body>
-
-
 	
 	<h1>User login</h1>
 
 	<h2>{{ctrl.testMsg}}</h2>
 
-	<section class="form shell">
-		<form class="journalist">
-			<input ng-model="ctrl.user.email" type="email" name="email" placeholder="Email"><br>
-			<input ng-model="ctrl.user.password" type="text" name="password" placeholder="password">
-			<button ng-click="ctrl.login(ctrl.user)" type="submit">SIGN IN</button>
-		</form>
-	</section>
+	<div class="row">
+        <div class="col-lg-8">
+    		<form name="sentMessage" id="contactForm" novalidate>
+        		<div class="control-group form-group">
+					<div class="controls">
 
+						<input type="text" class="form-control-login" id="name" required data-validation-required-message="Please enter your username/email." ng-model="ctrl.user.email" type="email" name="email" placeholder="Email">
+						</br>
+					
+					</div>	
+				</div>
+						
+					
+				<div class="control-group form-group">
+					<div class="controls">
+
+							<input type="text" class="form-control-login" id="name" required data-validation-required-message="Please enter your password." ng-model="ctrl.user.password" type="text" name="password" placeholder="password">
+							</br>
+
+					</div>
+				</div>
+								
+				<button ng-click="ctrl.login(ctrl.user)" type="submit">SIGN IN</button>
+	
+		    </form>
+		</div>
+	</div>
+						
+		
+
+		
 </body>
