@@ -4,9 +4,6 @@
 
 <body>
 
-<div>
-	{{ctrl.breweries}}
-</div>
 <div class="container">
 
 <div class="row">
@@ -156,28 +153,16 @@
 		</div>	
 </div>
 
+<div>
+	{{ctrl.breweries}}
+</div>
 
-					<!-- angular form for input/edit -->
-
-					<!-- <p>Name:<input type="text" ng-model="ctrl.update.name"></p>
-					<p>Address: <input type="text" ng-model="ctrl.update.address"> (required)</p>
-					<p>Telephone: <input type="text" ng-model="ctrl.update.telephone"></p>
-					<p>Email: <input type="text" ng-model="ctrl.update.email"></p>
-					<p>Thumbnail Image: <input type="text" ng-model="ctrl.update.image_thumb"></p>
-					<p>Main Image: <input type="text" ng-model="ctrl.update.image_main"></p>
-					<p>Hours: <input type="text" ng-model="ctrl.update.hours"></p>
-					<p>Social Media: <input type="text" ng-model="ctrl.update.social"></p> -->
-						
-						<!-- @ DAN we need to add twitter, facebook and instagram input fields to the user and brewey schema -->
-
-					<!-- <p>Beers: <input type="text" ng-model="ctrl.update.beers"></p>
-					<p>Events: <input type="text" ng-model="ctrl.update.events"></p> -->
-
-					<!-- <button ng-click="ctrl.getAll()">Get All</button>
+					<p>Select by Id: <input type="text" ng-model="ctrl.chooseId"></p>
+					<button ng-click="ctrl.getAll()">Get All</button>
 					<button ng-click="ctrl.getOne(ctrl.chooseId)">Get One</button>
 					<button ng-click="ctrl.post(ctrl.update)">Post</button>
 					<button ng-click="ctrl.put(ctrl.chooseId, ctrl.update)">Put</button>
-					<button ng-click="ctrl.del(ctrl.chooseId)">Delete</button> -->
+					<button ng-click="ctrl.del(ctrl.chooseId)">Delete</button>
 
 		</div>			
 </div>	
