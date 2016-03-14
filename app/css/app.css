@@ -16,6 +16,83 @@
 
 }
 
+/*form edit*/
+
+.form-control {
+    display: block;
+    width: 50%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+
+/*form edit*/
+
+
+.texttitle h1 {
+    font-family: 'quick_end_jerkregular', "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+}
+
+/*Footer text*/
+.textfooter a {
+    font-family: 'quick_end_jerkregular', "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  
+}
+
+
+/*log in page input fields */
+
+.form-control-login {
+    max-width: 330px;
+    display: block;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+
+.row-centered {
+    text-align:center;
+}
+
+.col-centered {
+    display:inline-block;
+    float:none;
+    /* reset the text-align */
+    text-align:center;
+    /* inline-block space fix */
+    margin-right:-4px;
+}
+
+.btn-centered {
+    position:absolute;
+    top: center;
+
+
+}
+
 /*main home page slider below*/
 
 .fill {
@@ -32,6 +109,27 @@
     /*-webkit-clip-path: polygon(100% 0, 0 100%, 0 0);
 	clip-path: polygon(100% 0, 0 100%, 0 0);*/
 }
+
+#carousel2{
+    background: url(./../img/beerbackground.png) right bottom no-repeat, url(./../img/hopsheaderleft.png) left bottom repeat;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+
+    /*-webkit-clip-path: polygon(100% 0, 0 100%, 0 0);
+    clip-path: polygon(100% 0, 0 100%, 0 0);*/
+}
+
+#carousel3{
+    background: url(./../img/beerbackground.png) right bottom no-repeat, url(./../img/barleyheaderleft.png) left bottom repeat;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+
+    /*-webkit-clip-path: polygon(100% 0, 0 100%, 0 0);
+    clip-path: polygon(100% 0, 0 100%, 0 0);*/
+}
+
 
 .logo1 {
 	position: absolute;
@@ -68,14 +166,15 @@
 }
 
 .carousel-caption h1{
-	font-family: 'quick_end_jerkregular';
-	font-size: 6em;
-	color: #000;
+	font-family: 'quick_end_jerkregular', "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 9em;
+	color: #75AB2A;
+    text-shadow: 3px 5px hsla(0,100%,100%,1);
 }
 
 .carousel-caption h2{
-	font-family: 'quick_end_jerkregular';
-	font-size: 3em;
+	font-family: 'quick_end_jerkregular', "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 2em;
 }
 
 /*main home page slider above*/
@@ -91,8 +190,8 @@
 
 @media(max-width:900px) {
     .carousel-caption h1 {
-    	font-size: 3em;
-    	padding-top: 20px;
+    	font-size: 6em;
+    	padding-top: 46px;
 
     }
 
@@ -110,7 +209,17 @@
 
 }
 
-/*breweries form*/
+/* Main page panel image bg 1 & 2 */
+
+.imagebg1{
+    background: url(./../img/brewerysignupblock.png) no-repeat;
+}
+
+/* Main page panel image bg 1 & 2 */
+
+
+
+/*form edit*/
 
 @media(max-width: 900px){
     .form-control {
@@ -118,12 +227,20 @@
 
 }
 
-/*log in inputs*/
 
-.form-control-login{
-    max-width: 150px;
-    vertical-align: center;
+/*to align breweries and beer headers*/
+
+.img-portfolio h3{
+    text-align: center;
 }
 
+/*main body spacer */
+
+.spacertop{
+    width: auto;
+    height: 90px;
+}
+
+/*footer*/
 
 

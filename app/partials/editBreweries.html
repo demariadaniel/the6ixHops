@@ -34,6 +34,23 @@
 								</div>
 							</div>
 
+							<!-- DAN we need to add this decription input to the schema -->
+
+							<div class="control-group form-group">
+		                        <div class="controls">
+		                        	<!-- angular input element -->
+		                        	<label>Description:</label>
+		                        	<!-- angular input element -->
+								<textarea rows="4" cols="50" class="form-control" name="description" required data-validation-required-message="Please enter your address." ng-model="ctrl.update.desription"> Enter text here...</textarea>
+									<!-- angular input element -->
+									<p class="help-block"></p>
+								</div>
+							</div>
+
+							<!-- DAN we need to add this decription input to the schema -->
+
+
+
 							<div class="control-group form-group">
 		                        <div class="controls">
 		                        	<!-- angular input element -->
@@ -93,12 +110,13 @@
 		                        	<!-- angular input element -->
 		                        	<label>Opening Hours</label>
 		                        	<!-- angular input element -->
-								<input type="text" class="form-control" id="Opening Hours" required data-validation-required-message="Please enter your oepning times." ng-model="ctrl.update.hours">
+								<input type="text" class="form-control" id="Opening Hours" required data-validation-required-message="Please enter your opening times." ng-model="ctrl.update.hours">
 									<!-- angular input element -->
 									<p class="help-block"></p>
 								</div>
 							</div>
 
+							<!-- Breweries twitter link -->
 
 							<div class="control-group form-group">
 		                        <div class="controls">
@@ -111,6 +129,8 @@
 								</div>
 							</div>
 
+							<!-- Breweries facebook link -->
+
 							<div class="control-group form-group">
 		                        <div class="controls">
 		                        	<!-- angular input element -->
@@ -121,6 +141,8 @@
 									<p class="help-block"></p>
 								</div>
 							</div>
+
+							<!-- Breweries instagram link -->
 
 							<div class="control-group form-group">
 		                        <div class="controls">
@@ -133,27 +155,8 @@
 								</div>
 							</div>
 
-							<div class="control-group form-group">
-		                        <div class="controls">
-		                        	<!-- angular input element -->
-		                        	<label>Beers</label>
-		                        	<!-- angular input element -->
-								<input type="text" class="form-control" id="beers" required data-validation-required-message="." ng-model="ctrl.update.beers">
-									<!-- angular input element -->
-									<p class="help-block"></p>
-								</div>
-							</div>
+							<!-- not sure what we mean here? -->
 
-							<div class="control-group form-group">
-		                        <div class="controls">
-		                        	<!-- angular input element -->
-		                        	<label>Events</label>
-		                        	<!-- angular input element -->
-								<input type="text" class="form-control" id="Events" required data-validation-required-message="." ng-model="ctrl.update.events">
-									<!-- angular input element -->
-									<p class="help-block"></p>
-								</div>
-							</div>
 				</form>
 		</div>	
 </div>
@@ -175,11 +178,11 @@
 					<!-- <p>Beers: <input type="text" ng-model="ctrl.update.beers"></p>
 					<p>Events: <input type="text" ng-model="ctrl.update.events"></p> -->
 
-					 <button ng-click="ctrl.getAll()">Get All</button>
-					<button ng-click="ctrl.getOne(ctrl.chooseId)">Get One</button>
-					<button ng-click="ctrl.post(ctrl.update)">Post</button>
-					<button ng-click="ctrl.put(ctrl.chooseId, ctrl.update)">Put</button>
-					<button ng-click="ctrl.del(ctrl.chooseId)">Delete</button> 
+					 <button class="btn btn-primary btn-md" ng-click="ctrl.getAll()">Get All</button>
+					<button class="btn btn-primary btn-md" ng-click="ctrl.getOne(ctrl.chooseId)">Get One</button>
+					<button class="btn btn-primary btn-md" ng-click="ctrl.post(ctrl.update)">Post</button>
+					<button class="btn btn-primary btn-md" ng-click="ctrl.put(ctrl.chooseId, ctrl.update)">Put</button>
+					<button class="btn btn-primary btn-md" ng-click="ctrl.del(ctrl.chooseId)">Delete</button> 
 
 		</div>			
 </div>	

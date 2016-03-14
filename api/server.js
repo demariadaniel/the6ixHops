@@ -9,7 +9,6 @@ app.listen(8080, function(){
 	console.log("Listening on Port 8080, Stop with Ctrl+C");
 });
 
-
 //MONGOOSE
 var mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/data/db/');
