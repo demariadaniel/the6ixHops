@@ -9,8 +9,8 @@ angular
 			ctrl.dbService = dbService;
 			ctrl.users = [];
 			ctrl.update = {
-				name: "",
-				email: ""
+				email: "",
+				password: ""
 			}
 
 			ctrl.getAll = getAll;

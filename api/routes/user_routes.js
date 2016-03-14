@@ -1,4 +1,6 @@
 var express      = require('express');
+var randomString = require('random-string');
+var jwt          = require('jsonwebtoken');
 var router       = express.Router();
 var User = require('./../models/Users');
 
@@ -32,8 +34,9 @@ router.get('/:id', function(req, res){
 router.post('/newUser', function(req, res){
         console.log(".post");
         var newUser = User({
-        	name: req.body.name,
-        	email: req.body.email
+        	// name: req.body.name,
+        	email: req.body.email,
+            password: req.body.password
         });
         newUser.save(function (err){
             if (err) {
@@ -45,13 +48,27 @@ router.post('/newUser', function(req, res){
         });
 });
 
+router.post('/login',function(req,res){
+    console.log("login endpoint");
+    var where = {where:{email:req.body.email,password:req.body.password}};
+    models.Users.find(where).then(function(user){
+        var user_obj = {email:user.email,id:user.id};
+        var token = jwt.sign(user_obj,'Fv1f3Y37S3RorBbT4PumpWVHejaEYnGs');
+            res.set('authentication',token);
+            res.json({
+                user:user
+            });
+    });
+});
+
 router.put('/:id', function(req, res) {
 	var identify = req.params.id;
     var query = { "_id": identify }
 	console.log("Update ID: " + identify);
 	var updateInfo = {
-                name: req.body.name,
+                // name: req.body.name,
                 email: req.body.email,
+                password: req.body.password
     	};
     console.log(updateInfo);
     User.update(query,updateInfo,{},function(err,user){

@@ -70,4 +70,15 @@
 					})
 		};
 
+		function login(payload){
+			$http.post('/users/login')
+				.then(function(res){
+						console.log(res);
+						return res
+			 		},function(err){
+			 			console.log(err);
+			 			return err
+			 })
+		}
+
 	};
