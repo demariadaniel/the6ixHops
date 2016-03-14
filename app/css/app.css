@@ -16,6 +16,23 @@
 
 }
 
+
+/* Main page panel image bg 1 & 2 */
+
+.imagebg1{
+    background: url(./../img/brewerysignupblock.png) no-repeat;
+    height: 400px;
+}
+
+.imagebg2{
+    background: url(./../img/beerssignupblock.png) no-repeat;
+    height: 400px;
+}
+
+
+
+/* Main page panel image bg 1 & 2 */
+
 /*form edit*/
 
 .form-control {
@@ -208,16 +225,6 @@
 	background-color: #000;
 
 }
-
-/* Main page panel image bg 1 & 2 */
-
-.imagebg1{
-    background: url(./../img/brewerysignupblock.png) no-repeat;
-}
-
-/* Main page panel image bg 1 & 2 */
-
-
 
 /*form edit*/
 
