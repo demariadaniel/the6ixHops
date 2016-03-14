@@ -13,6 +13,9 @@
 			this.put = put;
 			this.del = del;
 			this.login = login;
+	
+			this.brewery;
+			this.beer;
 
 		function getAll(addr){
 			console.log("getAll");
