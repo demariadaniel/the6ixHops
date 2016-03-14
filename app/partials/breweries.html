@@ -1,6 +1,4 @@
 <body>
-{{ctrl.testMsg}}
-
 <!-- Page Content -->
     <div class="container">
 
@@ -21,15 +19,11 @@
         
         <!-- Projects Row -->
         <div class="row">
-            <div class="col-md-3 img-portfolio">
-                <a href="subpage.html">
-                    <img class="img-responsive img-hover" src="img/bellwoods.jpg" alt="">
+            <div class="col-md-3 img-portfolio" ng-repeat="brewery in ctrl.breweries">
+                <a ng-click="ctrl.goToDetails(brewery)">
+                    <img class="img-responsive img-hover" ng-src="{{brewery.image_thumb}}">
+                <h3>{{brewery.name}}</h3>
                 </a>
-
-                
-                <h3>Brewery.title</h3>
-                
-
             </div>
         </div>
         <!-- /.row -->

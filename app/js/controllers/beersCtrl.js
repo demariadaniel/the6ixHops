@@ -2,11 +2,26 @@ angular
 	.module('app')
 	.controller('beersCtrl', beersCtrl);
 
-	function beersCtrl(dbService) {
+	function beersCtrl(dbService, $state) {
 		var ctrl = this;
 
-			ctrl.testMsg = "View B";
+			ctrl.state = $state;
 			ctrl.dbService = dbService;
+			ctrl.getAll = getAll;
+			ctrl.goToDetails = goToDetails;
+	
+			getAll();
 
-			console.log(ctrl.testMsg);
+		function getAll(){
+				var addr = '/api/beers/allBeers';
+				ctrl.dbService.getAll(addr).then(function(res){
+					ctrl.beers = res;
+				});
+		};
+
+		function goToDetails (beer) {
+			var ctrl = this;
+			ctrl.dbService.beer = beer;
+			ctrl.state.go('beer_subpage',{beerName:beer.name});
+		}
 	}

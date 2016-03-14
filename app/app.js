@@ -18,7 +18,7 @@ angular
 			.state('breweries',{
 				url:'/breweries',
 				templateUrl:'/partials/breweries.html',
-				controller: 'breweriesCtrl as ctrl'
+				controller: 'breweriesCtrl as ctrl',
 			})
 			.state('adminPanel',{
 				url:'/adminPanel',
@@ -34,6 +34,16 @@ angular
 				url:'/events',
 				templateUrl:'/partials/events.html',
 				controller: 'eventsCtrl as ctrl'
+			})
+			.state('brewery_subpage',{
+				url:'/brewery/:breweryName',
+				templateUrl:'/partials/brewery_subpage.html',
+				controller: 'detailsCtrl as ctrl'
+			})
+			.state('beer_subpage',{
+				url:'/beer/:beerName',
+				templateUrl:'/partials/beer_subpage.html',
+				controller: 'detailsCtrl as ctrl'
 			})
 			.state('editBreweries',{
 				url:'/editBreweries',

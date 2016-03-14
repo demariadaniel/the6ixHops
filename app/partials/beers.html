@@ -1,5 +1,4 @@
-<body>
-{{ctrl.testMsg}}
+
 <!-- Page Content -->
     <div class="container">
 
@@ -20,11 +19,11 @@
 
         <!-- Projects Row -->
         <div class="row">
-            <div class="col-md-3 img-portfolio">
-                <a href="subpage.html">
-                    <img class="img-responsive img-hover" src="img/bottlelogo.png" alt="">
+            <div class="col-md-3 img-portfolio" ng-repeat="beer in ctrl.beers">
+                <a ng-click="ctrl.goToDetails(beer)">
+                    <img class="img-responsive img-hover" ng-src="{{beer.image}}">
+                <h3>{{beer.title}}</h3>
                 </a>
-                <h3>Beer.title</h3>
             </div>
         </div>
         <!-- /.row -->
@@ -72,4 +71,4 @@
         </footer>
 
     </div>
-</body>
+
