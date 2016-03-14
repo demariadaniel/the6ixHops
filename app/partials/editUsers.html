@@ -9,17 +9,57 @@
 	{{ctrl.users}}
 </div>
 
-<p>Name: <input type="text" ng-model="ctrl.update.name"> (required)</p>
-<p>Email: <input type="text" ng-model="ctrl.update.email"> (required)</p>
-<p>Password: <input type="text" ng-model="ctrl.update.password"> (required)</p>
+<div class="container">
+
+		<div class="row">
+		        <div class="col-md-8">
+
+				<div class="control-group form-group">
+		                    <div class="controls">
+		                    	<!-- angular input element -->
+		                    	<label>Name:</label>
+		                    	<!-- angular input element -->
+							<input type="text" class="form-control" id="Name" required data-validation-required-message="Please enter your image." ng-model="ctrl.update.name">
+								<!-- angular input element -->
+								<p class="help-block">(required)</p>
+							</div>
+						</div>
+
+						<div class="control-group form-group">
+		                    <div class="controls">
+		                    	<!-- angular input element -->
+		                    	<label>E-Mail:</label>
+		                    	<!-- angular input element -->
+							<input type="text" class="form-control" id="email" required data-validation-required-message="Please enter your image." ng-model="ctrl.update.email">
+								<!-- angular input element -->
+								<p class="help-block">(required)</p>
+							</div>
+						</div>
+
+						<div class="control-group form-group">
+		                    <div class="controls">
+		                    	<!-- angular input element -->
+		                    	<label>password:</label>
+		                    	<!-- angular input element -->
+							<input type="text" class="form-control" id="email" required data-validation-required-message="Please enter your passwrd." ng-model="ctrl.update.password">
+								<!-- angular input element -->
+								<p class="help-block">(required)</p>
+							</div>
+						</div>
+
+				</div>
+		</div>
+	</div>
+
+<!--  -->
 
 <p>Id: <input type="text" ng-model="ctrl.chooseId"></p>
 
-<button ng-click="ctrl.getAll()">Get All</button>
-<button ng-click="ctrl.getOne(ctrl.chooseId)">Get One</button>
-<button ng-click="ctrl.post(ctrl.update)">Post</button>
-<button ng-click="ctrl.put(ctrl.chooseId, ctrl.update)">Put</button>
-<button ng-click="ctrl.del(ctrl.chooseId)">Delete</button>
+<button class="btn btn-primary btn-md" ng-click="ctrl.getAll()">Get All</button>
+<button class="btn btn-primary btn-md" ng-click="ctrl.getOne(ctrl.chooseId)">Get One</button>
+<button class="btn btn-primary btn-md" ng-click="ctrl.post(ctrl.update)">Post</button>
+<button class="btn btn-primary btn-md" ng-click="ctrl.put(ctrl.chooseId, ctrl.update)">Put</button>
+<button class="btn btn-primary btn-md" ng-click="ctrl.del(ctrl.chooseId)">Delete</button>
 
 </body>
 </html>

@@ -1,42 +1,46 @@
-
-<head>
-	<title>Login</title>
-</head>
 <body>
-	
-	<h1>User login</h1>
+		<div class="container-fluid">
 
-	<h2>{{ctrl.testMsg}}</h2>
-
-	<div class="row">
-        <div class="col-lg-8">
-    		<form name="sentMessage" id="contactForm" novalidate>
-        		<div class="control-group form-group">
-					<div class="controls">
-
-						<input type="text" class="form-control-login" id="name" required data-validation-required-message="Please enter your username/email." ng-model="ctrl.user.email" type="email" name="email" placeholder="Email">
-						</br>
+			<div class="row row-centered">
+				<h1>The 6ix Hops Log In </h1>
+				        <div class="col-md-2 col-centered text-centered">
+		
 					
-					</div>	
-				</div>
-						
+
+					<h2>{{ctrl.testMsg}}</h2>
+
 					
-				<div class="control-group form-group">
-					<div class="controls">
 
-							<input type="text" class="form-control-login" id="name" required data-validation-required-message="Please enter your password." ng-model="ctrl.user.password" type="text" name="password" placeholder="password">
-							</br>
+				    		<form>
 
-					</div>
-				</div>
-								
-				<button ng-click="ctrl.login(ctrl.user)" type="submit">SIGN IN</button>
-	
-		    </form>
+				        		<div class="control-group form-group ">
+									<div class="controls">
+
+										<input type="text" class="form-control-login"  required data-validation-required-message="Please enter your username/email." ng-model="ctrl.user.email" type="email" name="email" placeholder="Email">
+										</br>
+									
+									</div>	
+								</div>
+										
+									
+								<div class="control-group form-group ">
+									<div class="controls">
+
+											<input type="text" class="form-control-login" id="email" required data-validation-required-message="Please enter your password." ng-model="ctrl.user.password" type="text" name="password" placeholder="password">
+											</br>
+
+									</div>
+								</div>
+											
+			    </form>
+
+			    <button  class="btn btn-primary btn-md" ng-click="ctrl.login(ctrl.user)" type="submit">SIGN IN</button>
+
+			</div>
 		</div>
-	</div>
-						
+	</div>						
 		
 
+</br>
 		
 </body>

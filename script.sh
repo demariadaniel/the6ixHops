@@ -1,1 +1,7 @@
-open -a /Applications/Sublime\ Text.app/ Users/jordansearle/Desktop/BRAINSTATION/wdi_challenges/Chapter_9/wdi_final/wdi_final_project/api && node script.js && open http://localhost:80
+#!/bin/bash
+open -a "Sublime Text 2"
+
+node api/server.js
+
+/usr/bin/open -a "/Applications/Firefox.app" 'http://localhost/'
+
