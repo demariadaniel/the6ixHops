@@ -44,6 +44,7 @@ angular
 				localStorage.loginEmail = ctrl.email;
 				ctrl.auth_btn = res.data.msg;
 				ctrl.testMsg = "Logged In!"
+				$state.go("adminPanel");
 			})
 		}
 
