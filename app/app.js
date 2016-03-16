@@ -1,7 +1,7 @@
 angular
-	.module('app',['ui.router','ngFileUpload'])
-	.config(function($stateProvider, $urlRouterProvider){
-	
+	.module('app',['ui.router', 'angular-jwt', 'ngFileUpload'])
+	.config(function($stateProvider, $urlRouterProvider, $httpProvider){
+
 		$urlRouterProvider.otherwise('/home');
 
 		$stateProvider
@@ -60,5 +60,27 @@ angular
 				templateUrl:'/partials/editUsers.html',
 				controller: 'editUsersCtrl as ctrl'
 			})
-			
+
+			$httpProvider.interceptors.push(function(jwtHelper){
+				return {
+					request:function(config){
+						//console.log(config);
+						config.headers.authentication = localStorage.authToken;
+						return config;
+					},
+					response:function(response){
+						var auth_token = response.headers('authentication');
+						console.log(auth_token);
+						if(auth_token){
+							var decrypt_token = jwtHelper.decodeToken(auth_token);
+							console.log(decrypt_token);
+							if(decrypt_token.email){
+							localStorage.authToken = auth_token;
+						}
+						
+					}
+					return response;
+				}
+			}
+		});
 });

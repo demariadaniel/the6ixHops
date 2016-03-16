@@ -1,12 +1,14 @@
 //EXPRESS
 var express = require("express");
 var bodyParser = require('body-parser');
+var authentication = require("./middleware/auth");
 var app = express();
 // added multer for image upload added by jordan for image upload 
 var multer = require('multer'); 
-// ==============================================================
+
 app.use(express.static(__dirname + './../app'));
 app.use(bodyParser());
+app.use(bodyParser.urlencoded({extended:false}));
 
 app.listen(8080, function(){
 	console.log("Listening on Port 8080, Stop with Ctrl+C");
@@ -56,8 +58,10 @@ var Brewery = require('./models/Breweries');
 var userRoutes = require('./routes/user_routes');
 var beerRoutes = require('./routes/beer_routes');
 var breweryRoutes = require('./routes/brewery_routes');
+var auth_routes = require('./routes/auth_routes');
 
 //ENDPOINTS
 app.use('/api/users' , userRoutes);
 app.use('/api/beers' , beerRoutes);
 app.use('/api/breweries' , breweryRoutes);
+app.use('/api/auth', auth_routes);

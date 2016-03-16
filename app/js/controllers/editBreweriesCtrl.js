@@ -2,9 +2,9 @@ angular
 	.module('app')
 	.controller('editBreweriesCtrl', editBreweriesCtrl);
 
-	function editBreweriesCtrl(dbService, Upload) {
-
+	function editBreweriesCtrl(dbService, $state, Upload) {
 		var ctrl = this;
+		if (localStorage.authToken === undefined) {$state.go('login')};
 
 			ctrl.testMsg = "Login";
 			ctrl.dbService = dbService;
