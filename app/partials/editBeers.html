@@ -16,19 +16,21 @@
 
 						<div class="control-group form-group">
 		                        <div class="controls">
-		                        	<!-- angular input element -->
-		                        	<label>Beer Name:</label>
-		                        	<!-- angular input element -->
-								<input type="text" class="form-control" id="beer name" required data-validation-required-message="Please enter your name." ng-model="ctrl.update.name">
-									<!-- angular input element -->
-									<p class="help-block"></p>
+
+		                        
+		                        	<legend>Beer Name</lengend>
+		                     
+			                    	   	<!-- angular input element -->
+									<input type="text" class="form-control" id="beer name" required data-validation-required-message="Please enter your name." ng-model="ctrl.update.name">
+										<!-- angular input element -->
+										<p class="help-block"></p>
 								</div>
 							</div>
 
 							<div class="control-group form-group">
 		                        <div class="controls">
 		                        	<!-- angular input element -->
-		                        	<label>Brewery</label>
+		                        	<legend>Brewery</legend>
 		                        	<!-- angular input element -->
 								<input type="text" class="form-control" id="brewery" required data-validation-required-message="Please enter the brewery of the beer." ng-model="ctrl.update.brewery">
 									<!-- angular input element -->
@@ -39,7 +41,7 @@
 							<div class="control-group form-group">
 		                        <div class="controls">
 		                        	<!-- angular input element -->
-		                        	<label>Type</label>
+		                        	<legend>Type</legend>
 		                        	<!-- angular input element -->
 								<select id="selectbasic" name="selectbasic" class="form-control" ng-model="ctrl.update.type">
 							      <option value="IPA">IPA</option>
@@ -60,9 +62,13 @@
 							<div class="control-group form-group">
 		                        <div class="controls">
 		                        	<!-- angular input element -->
-		                        	<label>Main Image</label>
+		                        	<legend>Main Image</legend>
+
+		                        	<input ngf-select name="userPhoto" accept="image/*" ngf-max-size="2MB" type="file" ng-model="ctrl.photo">
+		                        	</br>
+									<button ng-click="ctrl.upload(ctrl.photo)">Upload File</button>
 		                        	<!-- angular input element -->
-								<input type="text" class="form-control" id="brewery" required data-validation-required-message="Please enter the main image." ng-model="ctrl.update.image">
+								<!-- <input type="text" class="form-control" id="brewery" required data-validation-required-message="Please enter the main image." ng-model="ctrl.update.image"> -->
 									<!-- angular input element -->
 									<p class="help-block"></p>
 								</div>
@@ -71,7 +77,7 @@
 							<div class="control-group form-group">
 		                        <div class="controls">
 		                        	<!-- angular input element -->
-		                        	<label>Description</label>
+		                        	<legend>Description</legend>
 		                        	<!-- angular input element -->
 								<textarea rows="4" cols="50" class="form-control" name="description" required data-validation-required-message="Please enter your address." ng-model="ctrl.update.desription"> Enter text here...</textarea>
 								</div>
@@ -80,8 +86,7 @@
 							<div class="control-group form-group">
 		                        <div class="controls">
 		                        	<!-- angular input element -->
-		                        	<label>Sizes Available</label>
-		                        	<!-- angular input element --><br>
+		                        	<legend>Sizes Available</legend>
 								<input type="checkbox" name="size" value="can" ng-model="ctrl.update.sizes"> &nbsp Can<br>
                                 <input type="checkbox" name="size" value="bottle" checked ng-model="ctrl.update.sizes"> &nbsp Bottle<br>
                                 <input type="checkbox" name="size" value="braught" checked ng-model="ctrl.update.sizes"> &nbsp Draught<br>
@@ -106,7 +111,7 @@
 							<div class="control-group form-group">
 		                        <div class="controls">
 		                        	<!-- angular input element -->
-		                        	<label>Strength</label>
+		                        	<legend>Strength</legend>
 		                        	<!-- angular input element -->
 								<input type="text" class="form-control form-width" id="brewery" required data-validation-required-message="Please enter the abv %" ng-model="ctrl.update.strength">
 									<!-- angular input element -->
@@ -116,7 +121,7 @@
 
 							<div class="control-group form-group">
 		                        <div class="controls">
-							  	<label>Available</label>
+							  	<legend>Available</legend>
 							    <select id="selectbasic" name="selectbasic" class="form-control" ng-model="ctrl.update.available">
 							      <option value="1">Spring</option>
 							      <option value="2">Summer</option>
@@ -131,7 +136,7 @@
 							<div class="control-group form-group">
 		                        <div class="controls">
 		                        	<!-- angular input element -->
-		                        	<label>Ingredients</label>
+		                        	<legend>Ingredients</legend>
 		                        	<!-- angular input element -->
 								<input type="text" class="form-control" id="brewery" required data-validation-required-message="Please enter the ingredients seperated by a comma" ng-model="ctrl.update.ingredients">
 									<!-- angular input element -->
@@ -142,7 +147,7 @@
 							<div class="control-group form-group">
 		                        <div class="controls">
 		                        	<!-- angular input element -->
-		                        	<label>Pairs well with</label>
+		                        	<legend>Pairs well with</legend>
 		                        	<!-- angular input element -->
 								<input type="text" class="form-control" id="brewery" required data-validation-required-message="Please list what food the beer goes well with" ng-model="ctrl.update.pairs_well">
 									<!-- angular input element -->
@@ -150,37 +155,14 @@
 								</div>
 							</div>
 
-							<!-- <div class="control-group form-group">
-		                        <div class="controls">
-		                        	<!-- angular input element -->
-		                        	<!-- <label>Draft</label> -->
-		                        	<!-- angular input element -->
-								<!-- <input type="text" class="form-control" id="brewery" required data-validation-required-message="Please list what food the beer goes well with" ng-model="ctrl.update.draft"> -->
-									<!-- angular input element -->
-									<!-- <p class="help-block"></p>
-								</div>
-							</div> -->
-
 
 					</form>
 			</div>	
 	</div>
 
 
+<button class="btn btn-primary btn-md" 	a ui-sref="adminPanel">Next</button>
 
-
-<!-- <p>Name: <input type="text" ng-model="ctrl.update.name"> (required)</p> -->
-<!-- <p>Brewery: <input type="text" ng-model="ctrl.update.brewery"></p> -->
-<!-- <p>Type: <input type="text" ng-model="ctrl.update.type"></p> -->
-<!-- <p>Image: <input type="text" ng-model="ctrl.update.image"></p>-->
- <!-- <p>Description: <input type="text" ng-model="ctrl.update.description"></p> -->
-<!-- <p>Sizes: <input type="text" ng-model="ctrl.update.sizes"></p> -->
-<!-- <p>Price: <input type="text" ng-model="ctrl.update.price"></p> -->
-<!-- <p>Strength: <input type="text" ng-model="ctrl.update.strength"></p> -->
-<!-- <p>Available: <input type="text" ng-model="ctrl.update.available"></p> -->
-<!-- <p>Ingredients: <input type="text" ng-model="ctrl.update.ingredients"></p> -->
-<!-- <p>Pairs Well With: <input type="text" ng-model="ctrl.update.pairs_well"></p> -->
-<!-- <p>Draft: <input type="text" ng-model="ctrl.update.draft"></p> -->
 
 <p>Select by Id: <input type="text" ng-model="ctrl.chooseId"></p>
 

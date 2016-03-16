@@ -5,47 +5,78 @@
 </head>
 <body>
 
-<div>
+<!-- <div>
 	{{ctrl.users}}
-</div>
+</div> -->
 
 <div class="container">
 
 		<div class="row">
+
 		        <div class="col-md-8">
 
-				<div class="control-group form-group">
-		                    <div class="controls">
-		                    	<!-- angular input element -->
-		                    	<label>Name:</label>
-		                    	<!-- angular input element -->
-							<input type="text" class="form-control" id="Name" required data-validation-required-message="Please enter your image." ng-model="ctrl.update.name">
-								<!-- angular input element -->
-								<p class="help-block">(required)</p>
-							</div>
+		        	<fieldset>
+   					 	<legend>Personal information</legend>
+
+									<div class="control-group form-group">
+					                    <div class="controls">
+					                    	<!-- angular input element -->
+					                    	<label>Full Name</label>
+					                    	<!-- angular input element -->
+										<input type="text" class="form-control" id="Name" required data-validation-required-message="Please enter your name" ng-model="ctrl.update.name">
+											<!-- angular input element -->
+										</div>
+									</div>
+
+									<div class="control-group form-group">
+					                    <div class="controls">
+					                    	<!-- angular input element -->
+					                    	<label>E-Mail</label>
+					                    	<!-- angular input element -->
+										<input type="email" name="email" class="form-control" required data-validation-required-message="Please enter your email" ng-model="ctrl.update.email">
+											<!-- angular input element -->
+											<p class="help-block">(required)</p>
+										</div>
+									</div>
+
+									<div class="control-group form-group">
+					                    <div class="controls">
+					                    	<!-- angular input element -->
+					                    	<label>Password</label>
+					                    	<!-- angular input element -->
+										<input type="text" class="form-control" id="email" required data-validation-required-message="Please enter your password" ng-model="ctrl.update.password">
+											<!-- angular input element -->
+											<p class="help-block">(required)</p>
+										</div>
+									</div>
+
+
+										<div class="control-group form-group">
+					                    <div class="controls">
+
+										<input ngf-select name="userPhoto" accept="image/*" ngf-max-size="2MB" type="file" ng-model="ctrl.photo">
+										</br>
+										<button ng-click="ctrl.upload(ctrl.photo)">Upload File</button>
+
+										</br>
+										</br>
+
+
+										<button class="btn btn-primary btn-md" ng-click="ctrl.post(ctrl.update)">Post</button>
+
+										</br>
+
+										<button class="btn btn-primary btn-md" 	a ui-sref="editBreweries">Next</button>
+
+									</fieldset>
+
+								</div>
+
+								<div class="col-md-4"> 		        	                    
+									<img src="/img/beermug.png" class="beermugsignup">
+									</divs>
 						</div>
 
-						<div class="control-group form-group">
-		                    <div class="controls">
-		                    	<!-- angular input element -->
-		                    	<label>E-Mail:</label>
-		                    	<!-- angular input element -->
-							<input type="text" class="form-control" id="email" required data-validation-required-message="Please enter your image." ng-model="ctrl.update.email">
-								<!-- angular input element -->
-								<p class="help-block">(required)</p>
-							</div>
-						</div>
-
-						<div class="control-group form-group">
-		                    <div class="controls">
-		                    	<!-- angular input element -->
-		                    	<label>password:</label>
-		                    	<!-- angular input element -->
-							<input type="text" class="form-control" id="email" required data-validation-required-message="Please enter your passwrd." ng-model="ctrl.update.password">
-								<!-- angular input element -->
-								<p class="help-block">(required)</p>
-							</div>
-						</div>
 
 				</div>
 		</div>

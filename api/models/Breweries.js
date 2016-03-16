@@ -7,10 +7,19 @@ var BrewerySchema = new Schema ({
 		required: true,
 		unique: true
 	},
-	address: {
+	street: {
 		type: String,
 		required: true,
 		unique: true
+	},
+	city: {
+		type: String,
+	},
+	province: {
+		type: String,
+	},
+	postcode: {
+		type: String,
 	},
 	telephone:{
 		type: String

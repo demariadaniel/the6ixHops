@@ -1,7 +1,7 @@
 angular
-	.module('app',['ui.router', 'angular-jwt'])
+	.module('app',['ui.router', 'angular-jwt', 'ngFileUpload'])
 	.config(function($stateProvider, $urlRouterProvider, $httpProvider){
-	
+
 		$urlRouterProvider.otherwise('/home');
 
 		$stateProvider

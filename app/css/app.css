@@ -16,28 +16,48 @@
 
 }
 
+/*Home page*/
 
-/* Main page panel image bg 1 & 2 */
+/* Main page panel image bg 1 & 2  */
+
+.imagebg0{
+/*    background: url(./../img/signup.png) no-repeat;
+*/    height: 400px;
+    width: 100%
+}
 
 .imagebg1{
     background: url(./../img/brewerysignupblock.png) no-repeat;
     height: 400px;
+    width: 100%
 }
 
 .imagebg2{
     background: url(./../img/beerssignupblock.png) no-repeat;
     height: 400px;
+    width: 100%;
 }
 
 
-
 /* Main page panel image bg 1 & 2 */
+
+legend {
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin-bottom: 20px;
+    font-size: 21px;
+    line-height: inherit;
+    color: #333;
+    border: 0;
+    /* border-bottom: 1px solid #e5e5e5; */
+}
 
 /*form edit*/
 
 .form-control {
     display: block;
-    width: 50%;
+    width: 70%;
     height: 34px;
     padding: 6px 12px;
     font-size: 14px;
@@ -55,7 +75,6 @@
 }
 
 /*form edit*/
-
 
 .texttitle h1 {
     font-family: 'quick_end_jerkregular', "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -106,8 +125,6 @@
 .btn-centered {
     position:absolute;
     top: center;
-
-
 }
 
 /*main home page slider below*/
@@ -162,12 +179,68 @@
 
     }
 
+/*main home page slider logo*/
+
     .logo1 {
     	right:50%;
     	transform: translateX(50%);
     }
 
 }
+
+/*main home page slider logo*/
+
+/* single item view image holders */
+
+/*
+ * ==== Losange shape image holder
+ */
+
+.losange, .losange div {
+  margin: 0 auto;
+  margin-top: 20px;
+  transform-origin: 50% 50%;
+  overflow: hidden;
+  width: 250px;
+  height: 250px;
+}
+
+.losange {
+  transform: rotate(45deg) translateY(10px);
+}
+
+.losange .los1 {
+  width: 500px;
+  height: 500px;
+  transform: rotate(-45deg) translateY(-74px);
+}
+
+.losange .los1 img {
+  width: 100%;
+  height: auto;
+}
+
+
+/* sign up and edit pages backgound logo */
+
+.logosignup {
+    position: absolute;
+        right:10px;
+        top: 30px;
+    }
+
+}
+
+.beermugsignup{
+    position: absolute;
+            right:-20px;
+            top: 50px;
+
+        }
+}
+
+/* sign up and edit pages glass */
+
 
 .carousel-caption {
     position: absolute;
@@ -203,7 +276,7 @@
 	color: #fff; 
 }
 
-/*media rules*/
+/*media rules ======================================*/
 
 @media(max-width:900px) {
     .carousel-caption h1 {
@@ -226,12 +299,93 @@
 
 }
 
-/*form edit*/
+/*responsive form edit*/
 
 @media(max-width: 900px){
-    .form-control {
+.form-control {
         max-width: 150px;
 
+}
+
+@media(max-width: 400px){
+.row-centered-responsive {
+    text-align:center;
+}
+
+@media(max-width: 400px){
+.col-centered-responsive {
+    display:inline-block;
+    float:none;
+    /* reset the text-align */
+    text-align:center;
+    /* inline-block space fix */
+
+}
+
+@media(max-width: 400px){
+.btn-centered-responsive {
+    position:absolute;
+    top: center;
+}
+
+/*responsive form edit*/
+
+
+/*home page main title center media rule*/
+
+@media(max-width: 900px){
+    .texttitle h1 {
+    font-family: 'quick_end_jerkregular', "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-align: center;
+}
+
+@media(max-width: 800px){
+.panel-body {
+    padding: 20px;
+}
+
+@media(max-width: 800px){
+.imagebg1{
+    background: url(./../img/brewerysignupblock.png) center no-repeat;
+    width: 100%; 
+
+}
+
+
+@media(max-width: 800px){
+.imagebg2{
+    background: url(./../img/beerssignupblock.png) center no-repeat;
+    width: 100%;
+}
+
+@media(max-width: 400px){
+.imagebg1{
+    background: url(./../img/brewerysignupblock.png) center no-repeat;
+    width: 100%;
+    padding: 10px; 
+
+}
+
+
+@media(max-width: 400px){
+.imagebg2{
+    background: url(./../img/beerssignupblock.png) center no-repeat;
+    width: 100%;
+    padding: 10px; 
+
+}
+
+/*mobile size form logo*/
+
+@media(max-width: 400px){
+.logosignup {
+    display: none;
+    }
+
+@media(max-width: 400px){
+    .beermugsignup{
+    display: none;
+        }
 }
 
 
@@ -241,13 +395,8 @@
     text-align: center;
 }
 
-/*main body spacer */
-
-.spacertop{
-    width: auto;
-    height: 90px;
-}
-
 /*footer*/
+
+
 
 

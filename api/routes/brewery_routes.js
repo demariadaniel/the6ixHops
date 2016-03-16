@@ -33,7 +33,10 @@ router.post('/newBrewery', function(req, res){
         console.log(".post");
         var newBrewery = Brewery({
         	name: req.body.name,
-            address: req.body.address,
+            street: req.body.street,
+            city: req.body.city,
+            province: req.body.province,
+            postcode: req.body.postcode,
             telephone: req.body.telephone,
             email: req.body.email,
             image_thumb: req.body.image_thumb,
