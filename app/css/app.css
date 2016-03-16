@@ -1,4 +1,4 @@
-.debug-router{
+background-size.debug-router{
     width: 100%;
     text-align: center
 }
@@ -18,12 +18,13 @@
 
 /*Home page*/
 
-/* Main page panel image bg 1 & 2  */
+/* Main page panel image bg 1, 2 & 3 */
 
 .imagebg0{
-/*    background: url(./../img/signup.png) no-repeat;
-*/    height: 400px;
+   background: url(./../img/signup.png) no-repeat;
+   height: 400px;
     width: 100%
+    margin-top:20px;
 }
 
 .imagebg1{
@@ -38,8 +39,14 @@
     width: 100%;
 }
 
+.panel-body {
+    padding: 15px;
+    margin-top: 20px;
+    height: 500px;
+}
 
-/* Main page panel image bg 1 & 2 */
+
+/* Main page panel image bg 1 , 2 & 3 */
 
 legend {
     display: block;
@@ -50,7 +57,6 @@ legend {
     line-height: inherit;
     color: #333;
     border: 0;
-    /* border-bottom: 1px solid #e5e5e5; */
 }
 
 /*form edit*/
@@ -87,7 +93,6 @@ legend {
   
 }
 
-
 /*log in page input fields */
 
 .form-control-login {
@@ -122,16 +127,16 @@ legend {
     margin-right:-4px;
 }
 
-.btn-centered {
-    position:absolute;
-    top: center;
+.btn-lg-bottom{
+    position: absolute;
+    bottom: 110px;
+    left: 80px;
 }
 
 /*main home page slider below*/
 
 .fill {
 	height: 500px!important;
-
 }
 
 #carousel1{
@@ -140,8 +145,6 @@ legend {
     height: 100%;
     background-size: cover;
 
-    /*-webkit-clip-path: polygon(100% 0, 0 100%, 0 0);
-	clip-path: polygon(100% 0, 0 100%, 0 0);*/
 }
 
 #carousel2{
@@ -149,9 +152,6 @@ legend {
     width: 100%;
     height: 100%;
     background-size: cover;
-
-    /*-webkit-clip-path: polygon(100% 0, 0 100%, 0 0);
-    clip-path: polygon(100% 0, 0 100%, 0 0);*/
 }
 
 #carousel3{
@@ -159,25 +159,13 @@ legend {
     width: 100%;
     height: 100%;
     background-size: cover;
-
-    /*-webkit-clip-path: polygon(100% 0, 0 100%, 0 0);
-    clip-path: polygon(100% 0, 0 100%, 0 0);*/
 }
-
 
 .logo1 {
 	position: absolute;
 	top:0;
 	right:0;
 }
-
-@media(max-width:767px) {
-    #carousel1 {
-    	/*background: url(./../img/overlaygreen.png) right bottom no-repeat;*/
-/*        width:!auto;
-       vertical-align: center;*/
-
-    }
 
 /*main home page slider logo*/
 
@@ -193,7 +181,7 @@ legend {
 /* single item view image holders */
 
 /*
- * ==== Losange shape image holder
+ * ==== Losange shape image holder on brewery listing subpages
  */
 
 .losange, .losange div {
@@ -220,8 +208,7 @@ legend {
   height: auto;
 }
 
-
-/* sign up and edit pages backgound logo */
+/* sign up and edit pages backgound pic edit */
 
 .logosignup {
     position: absolute;
@@ -239,8 +226,7 @@ legend {
         }
 }
 
-/* sign up and edit pages glass */
-
+/* sign up and edit pages glass pic backround */
 
 .carousel-caption {
     position: absolute;
@@ -280,7 +266,7 @@ legend {
 
 @media(max-width:900px) {
     .carousel-caption h1 {
-    	font-size: 6em;
+    	font-size: 3em;
     	padding-top: 46px;
 
     }
@@ -339,40 +325,47 @@ legend {
     text-align: center;
 }
 
-@media(max-width: 800px){
+@media(max-width: 400px){
 .panel-body {
-    padding: 20px;
+    margin-top: 0px;
+    height: 275px;
 }
 
-@media(max-width: 800px){
-.imagebg1{
-    background: url(./../img/brewerysignupblock.png) center no-repeat;
-    width: 100%; 
+/*home page content responsive*/
 
-}
-
-
-@media(max-width: 800px){
-.imagebg2{
-    background: url(./../img/beerssignupblock.png) center no-repeat;
+ @media(max-width: 400px){
+.imagebg0{
+    background: url(./../img/signupresponsive.png) center no-repeat;
+    background-size: contain;
     width: 100%;
+    padding: 10px; 
 }
 
 @media(max-width: 400px){
 .imagebg1{
-    background: url(./../img/brewerysignupblock.png) center no-repeat;
+    background: url(./../img/step2brewweriesresponsive.png) center no-repeat;
+    background-size: contain;
     width: 100%;
+    
     padding: 10px; 
 
 }
 
-
 @media(max-width: 400px){
 .imagebg2{
-    background: url(./../img/beerssignupblock.png) center no-repeat;
+    background: url(./../img/step3beersresponsive.png) center no-repeat;
+    background-size: contain;
     width: 100%;
+    
     padding: 10px; 
 
+}
+
+@media{
+.btn-lg-bottom {
+    position: absolute;
+    bottom: 5px;
+    left: 80px;
 }
 
 /*mobile size form logo*/
@@ -387,8 +380,6 @@ legend {
     display: none;
         }
 }
-
-
 /*to align breweries and beer headers*/
 
 .img-portfolio h3{
