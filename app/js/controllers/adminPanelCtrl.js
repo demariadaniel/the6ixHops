@@ -9,5 +9,7 @@ angular
 			ctrl.testMsg = "View D";
 			ctrl.dbService = dbService;
 
-			console.log(ctrl.testMsg);
+			ctrl.newAccount = dbService.newAccount;
+
+			console.log(ctrl.newAccount);
 	}

@@ -24,12 +24,20 @@ angular
 				pairs_well: "",
 				draft: ""
 			}
+			ctrl.createBeer = createBeer;
 
 			ctrl.getAll = getAll;
 			ctrl.getOne = getOne;
 			ctrl.post = post;
 			ctrl.put = put;
 			ctrl.del = del;
+
+		function createBeer(newBeer){
+			ctrl.dbService.newAccount.beer = newBeer;
+			console.log(ctrl.dbService.newAccount);
+			$state.go("adminPanel");
+		};
+
 
 		function getAll(){
 			console.log("getAll");

@@ -16,11 +16,19 @@ angular
 				password: "",
 			}
 
+			ctrl.createUser = createUser;
+
 			ctrl.getAll = getAll;
 			ctrl.getOne = getOne;
 			ctrl.post = post;
 			ctrl.put = put;
 			ctrl.del = del;
+
+		function createUser(newUser){
+			ctrl.dbService.newAccount.user = newUser;
+			console.log(ctrl.dbService.newAccount);
+			$state.go('editBreweries');
+		};
 
 		function getAll(){
 			console.log("getAll");

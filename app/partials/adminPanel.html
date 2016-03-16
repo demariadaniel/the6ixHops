@@ -12,10 +12,10 @@
                 <div class="thumbnail">
                     <img class="img-responsive" src="img/johnny.png" alt="">
                     <div class="caption">
-                        <h3>Dynamic Users .Name Here<br>
+                        <h3>{{ctrl.newAccount.user.name}}<br>
                             <small>Brewmaster</small>
                         </h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste saepe et quisquam nesciunt maxime.</p>
+                        <p>{{ctrl.newAccount.user.email}}</p>
                         <ul class="list-inline">
                             <li><a href="#"><i class="fa fa-2x fa-facebook-square"></i></a>
                             </li>
@@ -30,10 +30,10 @@
             <div class="col-md-8 backgroundgrey text-center">
                 <div class="thumbnail">
                     <div class="caption">
-                        <h3>Dynamic Brewery.name here <br>
+                        <h3>{{ctrl.newAccount.brewery.name}}<br>
                             
                         </h3>
-                        <p>info on brewery</p>
+                        <p>{{ctrl.newAccount.brewery.street}}</p>
 
                          <ul class="list-inline">
                             <li><a href="#"><i class="fa fa-2x fa-facebook-square"></i></a>
@@ -44,7 +44,7 @@
                             </li>
                         </ul>
                         		</br>
-                            <img class="img-responsive" src="img/bellwoods.jpg" alt="">
+                            <img class="img-responsive" ng-src="{{ctrl.newAccount.brewery.image_main}}" alt="">
                        
                     </div>
                 </div>
@@ -57,12 +57,13 @@
 	        </div>
 			        <div class="col-md-2 col-sm-4 col-xs-6">
 		                <div class="thumbnail">
-		                    <img class="img-responsive" src="http://placehold.it/500x300" alt="">
+		                    <img class="img-responsive" ng-src="{{ctrl.newAccount.beer.image}}" alt="">
 		                    <div class="caption">
 		                        <h3>Your Beers <br>
-		                            <small>beer.name here</small>
+		                            <small>{{ctrl.newAccount.beer.name}}</small>
 		                        </h3>
-		                        <p>info on beer</p>
+                                <p>{{ctrl.newAccount.beer.description}}</p>
+		                        <p>{{ctrl.newAccount.beer.type}}</p>
 		                        
 		                    </div>
 		                </div>

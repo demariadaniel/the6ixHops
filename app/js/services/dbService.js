@@ -7,6 +7,8 @@
 			this.allItem = [];
 			this.selectItem = {};
 
+			this.newAccount = {};
+
 			this.getAll = getAll;
 			this.getOne = getOne;
 			this.post = post;

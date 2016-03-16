@@ -4,10 +4,6 @@
 
 <body>
 
-<div>
-	{{ctrl.beers}}
-</div>
-
 <div class="container">
 
 	<div class="row">
@@ -79,7 +75,7 @@
 		                        	<!-- angular input element -->
 		                        	<legend>Description</legend>
 		                        	<!-- angular input element -->
-								<textarea rows="4" cols="50" class="form-control" name="description" required data-validation-required-message="Please enter your address." ng-model="ctrl.update.desription"> Enter text here...</textarea>
+								<textarea rows="4" cols="50" class="form-control" name="description" required data-validation-required-message="Please enter your address." ng-model="ctrl.update.description"> Enter text here...</textarea>
 								</div>
 							</div>
 
@@ -161,7 +157,7 @@
 	</div>
 
 
-<button class="btn btn-primary btn-md" 	a ui-sref="adminPanel">Next</button>
+<button class="btn btn-primary btn-md" ng-click="ctrl.createBeer(ctrl.update)">Next</button>
 
 
 <p>Select by Id: <input type="text" ng-model="ctrl.chooseId"></p>
