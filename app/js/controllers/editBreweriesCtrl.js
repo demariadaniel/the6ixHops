@@ -20,9 +20,9 @@ angular
 				image_thumb: "",
 				image_main: "",
 				hours: "",
-				social: "",
-				beers: "",
-				events: ""
+				twitter: "",
+				facebook: "",
+				instagram: ""
 			}
 
 			ctrl.getAll = getAll;
