@@ -2,8 +2,10 @@ angular
 	.module('app')
 	.controller('editUsersCtrl', editUsersCtrl);
 
-	function editUsersCtrl(dbService) {
+	function editUsersCtrl(dbService, $state) {
 		var ctrl = this;
+		//if (localStorage.authToken === undefined) {$state.go('login')};
+
 
 			ctrl.testMsg = "Edit C";
 			ctrl.dbService = dbService;

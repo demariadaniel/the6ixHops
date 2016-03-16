@@ -28,13 +28,17 @@
 
 											<input type="text" class="form-control-login" id="email" required data-validation-required-message="Please enter your password." ng-model="ctrl.user.password" type="text" name="password" placeholder="password">
 											</br>
+											<input type="text" class="form-control-login" id="email" required data-validation-required-message="Re-enter your password." ng-model="ctrl.repassword" type="text" name="repassword" placeholder="password">
+											</br>
 
 									</div>
 								</div>
 											
 			    </form>
 
-			    <button  class="btn btn-primary btn-md" ng-click="ctrl.login(ctrl.user)" type="submit">SIGN IN</button>
+			    <button  class="btn btn-primary btn-md" ng-click="ctrl.authenticate(ctrl.user)" type="submit">{{ctrl.auth_btn}}</button>
+			    <button  class="btn btn-primary btn-md" ng-click="ctrl.register(ctrl.user)" type="submit">{{ctrl.register_btn}}</button>
+			    <button  class="btn btn-primary btn-md" ng-click="ctrl.logOut()" type="submit">Logout</button>
 
 			</div>
 		</div>
