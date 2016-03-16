@@ -5,10 +5,6 @@
 </head>
 <body>
 
-<!-- <div>
-	{{ctrl.users}}
-</div> -->
-
 <div class="container">
 
 		<div class="row">
@@ -23,7 +19,7 @@
 					                    	<!-- angular input element -->
 					                    	<label>Full Name</label>
 					                    	<!-- angular input element -->
-										<input type="text" class="form-control" id="Name" required data-validation-required-message="Please enter your name" ng-model="ctrl.update.name">
+						<input type="text" class="form-control" id="Name" required data-validation-required-message="Please enter your name" ng-model="ctrl.update.name"> 
 											<!-- angular input element -->
 										</div>
 									</div>
@@ -66,7 +62,7 @@
 
 										</br>
 
-										<button class="btn btn-primary btn-md" 	a ui-sref="editBreweries">Next</button>
+										<button class="btn btn-primary btn-md" ng-click="ctrl.createUser(ctrl.update)">Next</button>
 
 									</fieldset>
 

@@ -24,6 +24,7 @@ angular
 				facebook: "",
 				instagram: ""
 			}
+			ctrl.createBrewery = createBrewery;
 
 			ctrl.getAll = getAll;
 			ctrl.getOne = getOne;
@@ -31,6 +32,12 @@ angular
 			ctrl.put = put;
 			ctrl.del = del;
 			ctrl.upload = upload;
+
+		function createBrewery(newBrewery){
+			ctrl.dbService.newAccount.brewery = newBrewery;
+			console.log(ctrl.dbService.newAccount);
+			$state.go("editBeers");
+		};
 
 		function getAll(){
 			console.log("getAll");
