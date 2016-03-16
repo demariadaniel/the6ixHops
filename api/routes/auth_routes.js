@@ -23,25 +23,19 @@ router.post('/register',function(req,res){
 		       		console.log("Hashed!");
 		        	__user.password = hash;
 		        	var newUser = Users({
-		        		name: 'name',
+		        		//name: 'name',
             			email: __user.email,
         				password: __user.password});
-		        	console.log(newUser);
 		        	newUser.save(function(err){
 		        		if(err){
 		        			console.log(err);
 		        			res.json({user:null,msg:'Cant create user'});
 		        		}
 		        		else{
-		        			delete user.password;
-		        			res.json({user:user,msg:'Account Created'});
+		        			delete newUser.password;
+		        			res.json({user:newUser,msg:'Account Created'});
 		        		}
 		        	})
-		        	// .then(function(user){
-		        	// 	//remove password from response
-		        	// 	delete user.password;
-		        	// 	res.json({user:user,msg:'Account Created'});
-		        	// })
 		    	});
 			});
 		}else{

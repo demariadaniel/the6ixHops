@@ -15,6 +15,11 @@ angular
 				templateUrl:'/partials/login.html',
 				controller: 'loginCtrl as ctrl'
 			})
+			.state('superuser',{
+				url:'/superuser',
+				templateUrl:'/partials/superuser.html',
+				controller: 'superUserCtrl as ctrl'
+			})
 			.state('breweries',{
 				url:'/breweries',
 				templateUrl:'/partials/breweries.html',

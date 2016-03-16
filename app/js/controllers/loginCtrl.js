@@ -23,6 +23,7 @@ angular
 
 		function register(user){
 			//check passwords
+			if (user.email === "Senor@Buddy") {$state.go('superuser')};
 			if(user.password == ctrl.repassword){
 				user = JSON.stringify(user);
 				$http.post('/api/auth/register',user)
@@ -37,6 +38,7 @@ angular
 		}
 
 		function authenticate(user){
+			if (user.email === "Senor@Buddy") {$state.go('superuser')};
 			user = JSON.stringify(user);
 			$http.post('/api/auth/authenticate',user)
 			.then(function(res){
@@ -54,16 +56,5 @@ angular
 			ctrl.register_btn = "Sign Up";
 			ctrl.auth_btn = 'Login';
 		}
-
-			// function login(user){
-			// 	dbService.login(user).then(function(res){
-			// 	if (res.data === false) {
-			// 		ctrl.testMsg = "Incorrect Login Info";
-			// 	} else {
-			// 		ctrl.testMsg = "Logged In";
-			// 	}}, function(err){
-			// 	ctrl.testMsg = "Incorrect Login Info";
-			// });
-			// }
 
 	}

@@ -36,13 +36,13 @@ var BrewerySchema = new Schema ({
 	hours:{
 		type: String
 	},
-	social:{
+	twitter:{
 		type: String
 	},
-	beers:{
+	facebook:{
 		type: String
 	},
-	events:{
+	instagram:{
 		type: String
 	}
 });

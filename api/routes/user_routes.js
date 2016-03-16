@@ -57,7 +57,7 @@ router.get('/:id', function(req, res){
 router.post('/newUser', function(req, res){
         console.log(".post");
         var newUser = User({
-        	name: req.body.name,
+        //	name: req.body.name,
             email: req.body.email,
         	password: req.body.password
         });
@@ -76,7 +76,7 @@ router.put('/:id', function(req, res) {
     var query = { "_id": identify }
 	console.log("Update ID: " + identify);
 	var updateInfo = {
-                name: req.body.name,
+            //    name: req.body.name,
                 email: req.body.email,
                 password: req.body.password,
     	};

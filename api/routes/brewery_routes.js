@@ -42,9 +42,9 @@ router.post('/newBrewery', function(req, res){
             image_thumb: req.body.image_thumb,
             image_main: req.body.image_main,
             hours: req.body.hours,
-            social: req.body.social,
-            beers: req.body.beers,
-            events: req.body.events
+            twitter: req.body.social,
+            facebook: req.body.beers,
+            instagram: req.body.events
         });
         newBrewery.save(function (err){
             if (err) {
@@ -68,9 +68,9 @@ router.put('/:id', function(req, res) {
             image_thumb: req.body.image_thumb,
             image_main: req.body.image_main,
             hours: req.body.hours,
-            social: req.body.social,
-            beers: req.body.beers,
-            events: req.body.events
+            twitter: req.body.social,
+            facebook: req.body.beers,
+            instagram: req.body.events
     	};
     console.log(updateInfo);
     Brewery.update(query,updateInfo,{},function(err,brewery){
