@@ -2,7 +2,7 @@ angular
 	.module('app')
 	.controller('editBreweriesCtrl', editBreweriesCtrl);
 
-	function editBreweriesCtrl(dbService) {
+	function editBreweriesCtrl(dbService, Upload) {
 
 		var ctrl = this;
 
@@ -11,7 +11,10 @@ angular
 			ctrl.breweries = [];
 			ctrl.update = {
 				name: "",
-				address: "",
+				street:"",
+				city:"",
+				province:"",
+				postcode:"",
 				telephone: "",
 				email: "",
 				image_thumb: "",
@@ -27,12 +30,15 @@ angular
 			ctrl.post = post;
 			ctrl.put = put;
 			ctrl.del = del;
+			ctrl.upload = upload;
 
 		function getAll(){
 			console.log("getAll");
 			var addr = '/api/breweries/allBreweries';
 			dbService.getAll(addr).then(function(res){
 					ctrl.breweries = res;
+					console.log(res);
+					//ctrl.breweries.address = JSON.parse(res.address);
 			});
 		};
 
@@ -55,6 +61,9 @@ angular
 		function put(id, update){
 			console.log('PUT request id: ' + id);
 			var addr = '/api/breweries/';
+
+			ctrl.update.address = JSON.stringify(ctrl.update.address);
+
 			dbService.put(addr, id, update).then(function(res){
 			if (res) ctrl.getAll();
 		});
@@ -67,5 +76,22 @@ angular
 			if (res) ctrl.getAll();
 		});
 	};
+
+	   function upload(file, path) {
+		file.upload = Upload.upload({
+			url: '/api/photo/',
+			data: {file: file}
+		})
+		.then(function(res) {
+			if (path === "image_main") {
+					ctrl.update.image_main = 'http://localhost:8080/uploads/' + res.data[0].filename;
+				} else {
+					ctrl.update.image_thumb = 'http://localhost:8080/uploads/' + res.data[0].filename;	
+			}
+
+		}, function(err) {
+			console.log(err);
+		})
+	}
 
 }

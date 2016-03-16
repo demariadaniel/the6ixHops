@@ -1,5 +1,5 @@
 angular
-	.module('app',['ui.router'])
+	.module('app',['ui.router','ngFileUpload'])
 	.config(function($stateProvider, $urlRouterProvider){
 	
 		$urlRouterProvider.otherwise('/home');
@@ -60,4 +60,5 @@ angular
 				templateUrl:'/partials/editUsers.html',
 				controller: 'editUsersCtrl as ctrl'
 			})
+			
 });

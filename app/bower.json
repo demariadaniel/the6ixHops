@@ -1,0 +1,23 @@
+{
+  "name": "app",
+  "main": "app.js",
+  "homepage": "https://github.com/JordyRacer/wdi_final_project",
+  "authors": [
+    "Jordan Searle <jordan@jordansearle.com>"
+  ],
+  "description": "",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-animate": "^1.5.0",
+    "angular-touch": "^1.5.0",
+    "ng-file-upload": "^12.0.4"
+  }
+}
