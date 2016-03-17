@@ -5,8 +5,8 @@ angular
 	function editUsersCtrl(dbService, $state, Upload) {
 		var ctrl = this;
 		//if (localStorage.authToken === undefined) {$state.go('login')};
-​
-​
+
+
 			ctrl.testMsg = "Edit C";
 			ctrl.dbService = dbService;
 			ctrl.users = [];
@@ -16,9 +16,9 @@ angular
 				password: "",
 				image: ""
 			}
-​
+
 			ctrl.createUser = createUser;
-​
+
 			ctrl.getAll = getAll;
 			ctrl.getOne = getOne;
 			ctrl.post = post;
@@ -31,7 +31,7 @@ angular
 			console.log(ctrl.dbService.newAccount);
 			$state.go('editBreweries');
 		};
-​
+
 		function getAll(){
 			console.log("getAll");
 			var addr = '/api/users/allUsers';
@@ -39,7 +39,7 @@ angular
 					ctrl.users = res;
 			});
 		};
-​
+
 		function getOne(id){
 			var addr = '/api/users/';
 			dbService.getOne(addr, id).then(function(res){
@@ -47,7 +47,7 @@ angular
 					ctrl.users.push(res);
 			});
 		};
-​
+
 		function post(newUser){
 			console.log("post");
 			var addr = '/api/users/newUser';
@@ -55,7 +55,7 @@ angular
 				if (res) {ctrl.getAll()}
 			})
 		};
-​
+
 		function put(id, update){
 			console.log('PUT request id: ' + id);
 			var addr = '/api/users/';
@@ -63,7 +63,7 @@ angular
 			if (res) ctrl.getAll();
 		});
 	};
-​
+
 		function del(id){
 			console.log("del");
 			var addr = '/api/users/';
