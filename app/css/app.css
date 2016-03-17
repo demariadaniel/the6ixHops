@@ -46,7 +46,7 @@ background-size.debug-router{
 }
 
 
-/* Main page panel image bg 1 , 2 & 3 */
+/* Main page panel image bg 1, 2 & 3 */
 
 legend {
     display: block;
@@ -63,7 +63,7 @@ legend {
 
 .form-control {
     display: block;
-    width: 70%;
+    width: 80%;
     height: 34px;
     padding: 6px 12px;
     font-size: 14px;
@@ -129,8 +129,8 @@ legend {
 
 .btn-lg-bottom{
     position: absolute;
-    bottom: 110px;
-    left: 80px;
+    bottom: 130px;
+    left: 100px;
 }
 
 /*main home page slider below*/
@@ -169,7 +169,7 @@ legend {
 
 /*main home page slider logo*/
 
-    .logo1 {
+.logo1 {
     	right:50%;
     	transform: translateX(50%);
     }
@@ -181,42 +181,54 @@ legend {
 /* single item view image holders */
 
 /*
- * ==== Losange shape image holder on brewery listing subpages
+ * ==== Polaroid shape image holder on brewery listing subpages
  */
 
-.losange, .losange div {
-  margin: 0 auto;
-  margin-top: 20px;
-  transform-origin: 50% 50%;
-  overflow: hidden;
-  width: 250px;
-  height: 250px;
+.polaroid {
+  position: relative;
+  width: 220px;
 }
 
-.losange {
-  transform: rotate(45deg) translateY(10px);
+.polaroid img {
+  border: 10px solid #fff;
+  border-bottom: 45px solid #fff;
+  -webkit-box-shadow: 3px 3px 3px #777;
+     -moz-box-shadow: 3px 3px 3px #777;
+          box-shadow: 3px 3px 3px #777;
 }
 
-.losange .los1 {
-  width: 500px;
-  height: 500px;
-  transform: rotate(-45deg) translateY(-74px);
-}
-
-.losange .los1 img {
+.polaroid p {
+  position: absolute;
+  text-align: center;
   width: 100%;
-  height: auto;
+  bottom: 0px;
+  font: 400 18px/1 'Kaushan Script', cursive;
+  color: #888;
 }
 
-/* sign up and edit pages backgound pic edit */
-
-.logosignup {
-    position: absolute;
-        right:10px;
-        top: 30px;
-    }
-
+.polaroid {
+  position: relative;
+  width: 220px;
 }
+ 
+.polaroid img {
+  border: 10px solid #fff;
+  border-bottom: 45px solid #fff;
+  -webkit-box-shadow: 3px 3px 3px #777;
+     -moz-box-shadow: 3px 3px 3px #777;
+          box-shadow: 3px 3px 3px #777;
+}
+ 
+.polaroid p {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  bottom: 0px;
+  font: 400 18px/1 'Kaushan Script', cursive;
+  color: #888;
+}
+
+/* sign up and edit pages backgound pic  */
 
 .beermugsignup{
     position: absolute;
@@ -226,7 +238,7 @@ legend {
         }
 }
 
-/* sign up and edit pages glass pic backround */
+/* carousel variants*/
 
 .carousel-caption {
     position: absolute;
@@ -253,9 +265,27 @@ legend {
 	font-size: 2em;
 }
 
-/*main home page slider above*/
+/*text style changes */
 
-/*navbar*/
+
+.texttype1 h1{
+    font-family: 'quick_end_jerkregular', "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 9em;
+    color: #000000;
+    text-shadow: 3px 5px hsla(0,100%,100%,1);
+}
+
+/*text style changes */
+
+.texttype2 h1{
+    font-family: 'quick_end_jerkregular', "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 9em;
+    color: brown;
+    text-shadow: 3px 5px hsla(0,100%,100%,1);
+}
+
+
+/*navbar MENU */
 
 .navbar-brand{ 
 	font-family: 'quick_end_jerkregular';
@@ -285,28 +315,20 @@ legend {
 
 }
 
-/*responsive form edit*/
+/*responsive form edit width*/
 
 @media(max-width: 900px){
 .form-control {
-        max-width: 150px;
+        max-width: 250px;
+}
+
+@media(max-width: 900px){
+.controls{
+        max-width: 250px;
+        padding-left: 10px;
 
 }
 
-@media(max-width: 400px){
-.row-centered-responsive {
-    text-align:center;
-}
-
-@media(max-width: 400px){
-.col-centered-responsive {
-    display:inline-block;
-    float:none;
-    /* reset the text-align */
-    text-align:center;
-    /* inline-block space fix */
-
-}
 
 @media(max-width: 400px){
 .btn-centered-responsive {
@@ -320,9 +342,9 @@ legend {
 /*home page main title center media rule*/
 
 @media(max-width: 900px){
-    .texttitle h1 {
-    font-family: 'quick_end_jerkregular', "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    text-align: center;
+.texttitle h1 {
+font-family: 'quick_end_jerkregular', "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+text-align: center;
 }
 
 @media(max-width: 400px){
@@ -388,6 +410,25 @@ legend {
 
 /*footer*/
 
+@media(max-width: 400px){
+.col-centered {
+ 
+    text-align: center;
+    margin-left: 80px;
+}
 
+
+/*/*responsive form edit width*/
+
+/*@media(max-width: 400px){
+.row-centered-responsive {
+    text-align:center;
+}*/
+
+/*@media(max-width: 400px){
+.col-centered-responsive {
+     reset the text-align 
+    text-align:center;
+    /* inline-block space fix */
 
 
