@@ -23,20 +23,24 @@ background-size.debug-router{
 .imagebg0{
    background: url(./../img/signup.png) no-repeat;
    height: 400px;
-    width: 100%
-    margin-top:20px;
+    background-size: contain;
+    width: 100%;
 }
 
 .imagebg1{
-    background: url(./../img/brewerysignupblock.png) no-repeat;
+    background: url(./../img/brewerysignupblock.gif) no-repeat;
     height: 400px;
-    width: 100%
+
+    background-size: contain;
+    width: 100%;
 }
 
 .imagebg2{
-    background: url(./../img/beerssignupblock.png) no-repeat;
+    background: url(./../img/beerssignupblock.gif) no-repeat;
     height: 400px;
+    background-size: contain;
     width: 100%;
+    
 }
 
 .panel-body {
@@ -62,7 +66,6 @@ legend {
 /*form edit*/
 
 .form-control {
-    display: block;
     width: 80%;
     height: 34px;
     padding: 6px 12px;
@@ -97,7 +100,6 @@ legend {
 
 .form-control-login {
     max-width: 330px;
-    display: block;
     height: 34px;
     padding: 6px 12px;
     font-size: 14px;
@@ -186,29 +188,7 @@ legend {
 
 .polaroid {
   position: relative;
-  width: 220px;
-}
-
-.polaroid img {
-  border: 10px solid #fff;
-  border-bottom: 45px solid #fff;
-  -webkit-box-shadow: 3px 3px 3px #777;
-     -moz-box-shadow: 3px 3px 3px #777;
-          box-shadow: 3px 3px 3px #777;
-}
-
-.polaroid p {
-  position: absolute;
-  text-align: center;
-  width: 100%;
-  bottom: 0px;
-  font: 400 18px/1 'Kaushan Script', cursive;
-  color: #888;
-}
-
-.polaroid {
-  position: relative;
-  width: 220px;
+ 
 }
  
 .polaroid img {
@@ -290,6 +270,27 @@ legend {
 .navbar-brand{ 
 	font-family: 'quick_end_jerkregular';
 	color: #fff; 
+}
+
+/*log in page ul inline*/
+
+.list-inlne 
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.list-inlne 
+li {
+    display: inline;
+}
+
+.login-center
+  {
+    text-align: center;
+    display: block;
+    margin-top: 0em;
 }
 
 /*media rules ======================================*/
@@ -412,11 +413,9 @@ text-align: center;
 
 @media(max-width: 400px){
 .col-centered {
- 
     text-align: center;
-    margin-left: 80px;
-}
-
+/*    margin-left: 80px;
+*/}
 
 /*/*responsive form edit width*/
 

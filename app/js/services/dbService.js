@@ -77,6 +77,7 @@
 					})
 		};
 
+
 		function login(payload) {
 			return $http.post('api/users/login', payload)
 				.then(function(res){
@@ -86,6 +87,6 @@
 					console.log(err);
 					return err
 				})
-		}
+			}
 
 	};

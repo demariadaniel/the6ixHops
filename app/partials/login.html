@@ -2,18 +2,22 @@
 		<div class="container-fluid">
 
 			<div class="row row-centered">
-				<h1>The 6ix Hops Log In </h1>
-				        <div class="col-md-2 col-centered text-centered">
-		
+			</br>
+
+				<img src="img/bottlelogomainhalfsize.png">
+
+				<h1>The 6ix Hops</h1>
 					
+						<h2>Log In </h2>
+					        <div class="col-md-4 col-centered text-centered">
+								
+								<!-- <h2>{{ctrl.testMsg}}</h2> -->
 
-					<h2>{{ctrl.testMsg}}</h2>
+								</br>
 
-					
+					    		<form>
 
-				    		<form>
-
-				        		<div class="control-group form-group ">
+				        		<div class="control-group form-group">
 									<div class="controls">
 
 										<input type="text" class="form-control-login"  required data-validation-required-message="Please enter your username/email." ng-model="ctrl.user.email" type="email" name="email" placeholder="Email">
@@ -28,27 +32,46 @@
 
 											<input type="text" class="form-control-login" id="email" required data-validation-required-message="Please enter your password." ng-model="ctrl.user.password" type="text" name="password" placeholder="password">
 											</br>
-											<input type="text" class="form-control-login" id="email" required data-validation-required-message="Re-enter your password." ng-model="ctrl.repassword" type="text" name="repassword" placeholder="password">
+											<br>
+											<input type="text" class="form-control-login" id="email" required data-validation-required-message="Re-enter your password." ng-model="ctrl.repassword" type="text" name="reenterpassword" placeholder="re enter password">
 											</br>
 
 									</div>
 								</div>
 								
 								<!-- captcha code -->
-<!-- 								<div class="g-recaptcha" data-sitekey="6Ldx4hoTAAAAABZpHHVq2ONeRP-DRDIV_iiyhu9A"></div>
- -->
+								<div class="g-recaptcha" data-sitekey="6Ldx4hoTAAAAABZpHHVq2ONeRP-DRDIV_iiyhu9A"></div>
 
-			    </form>
+			    		</form>
 
-			    <button  class="btn btn-primary btn-md" ng-click="ctrl.authenticate(ctrl.user)" type="submit">{{ctrl.auth_btn}}</button>
-			    <button  class="btn btn-primary btn-md" ng-click="ctrl.register(ctrl.user)" type="submit">{{ctrl.register_btn}}</button>
-			    <button  class="btn btn-primary btn-md" ng-click="ctrl.logOut()" type="submit">Logout</button>
+			    	</br>
 
+				   <ul class="list-inline"> 	
+					    <li><button  class="btn btn-primary btn-md" ng-click="ctrl.authenticate(ctrl.user)" type="submit">{{ctrl.auth_btn}}</button></li>
+					   <li><button  class="btn btn-primary btn-md" ng-click="ctrl.register(ctrl.user)" type="submit">{{ctrl.register_btn}}</button></li>
+					   <li><button  class="btn btn-primary btn-md" ng-click="ctrl.logOut()" type="submit">Logout</button></li>
+					  
+					</ul>
+					</br>
+					<ul class="list-inline">
+						<li></li>
+					</ul>	
+			
+					</div>		
 			</div>
 		</div>
-	</div>						
-		
+	</div>	
 
+		<div class="container-fluid">	
+
+			<div class="row">
+								<div class="col-lg-4">
+
+									<div class="g-recaptcha" data-sitekey="6Ldx4hoTAAAAABZpHHVq2ONeRP-DRDIV_iiyhu9A"></div>
+
+									</div>	
+				  </div>					
+		</div>
 </br>
 		
 </body>

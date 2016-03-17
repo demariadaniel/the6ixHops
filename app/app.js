@@ -1,9 +1,9 @@
 angular
 	.module('app',['ui.router', 'angular-jwt', 'ngFileUpload'])
 	.config(function($stateProvider, $urlRouterProvider, $httpProvider){
-
+​
 		$urlRouterProvider.otherwise('/home');
-
+​
 		$stateProvider
 			.state('home',{
 				url:'/home',
@@ -79,7 +79,7 @@ angular
 				templateUrl:'/partials/editUsers.html',
 				controller: 'editUsersCtrl as ctrl'
 			})
-
+​
 			$httpProvider.interceptors.push(function(jwtHelper){
 				return {
 					request:function(config){
