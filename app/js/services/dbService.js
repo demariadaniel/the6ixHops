@@ -7,7 +7,15 @@
 			this.allItem = [];
 			this.selectItem = {};
 
-			this.newAccount = {};
+			this.newAccount = {
+				user: {
+					name: "",
+					email: "",
+					image: ""
+				},
+				brewery: "",
+				beers: []
+			};
 
 			this.getAll = getAll;
 			this.getOne = getOne;

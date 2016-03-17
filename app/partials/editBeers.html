@@ -63,10 +63,7 @@
 		                        	<input ngf-select name="beerPhoto" accept="image/*" ngf-max-size="2MB" type="file" ng-model="ctrl.update.image">
 		                        	</br>
 									<button ng-click="ctrl.upload(ctrl.update.image)">Upload File</button>
-		                        	<!-- angular input element -->
-								<!-- <input type="text" class="form-control" id="brewery" required data-validation-required-message="Please enter the main image." ng-model="ctrl.update.image"> -->
-									<!-- angular input element -->
-									<p class="help-block"></p>
+									{{ctrl.update.image}}
 								</div>
 							</div>
 
@@ -149,14 +146,5 @@
 
 <button class="btn btn-primary btn-md" ng-click="ctrl.createBeer(ctrl.update)">Add Beer</button>
 <button class="btn btn-primary btn-md" ng-click="ctrl.finish(ctrl.beers)">Finish</button>
-
-
-<p>Select by Id: <input type="text" ng-model="ctrl.chooseId"></p>
-
-<button class="btn btn-primary btn-md" ng-click="ctrl.getAll()">Get All</button>
-<button class="btn btn-primary btn-md" ng-click="ctrl.getOne(ctrl.chooseId)">Get One</button>
-<button class="btn btn-primary btn-md" ng-click="ctrl.post(ctrl.update)">Post</button>
-<button class="btn btn-primary btn-md" ng-click="ctrl.put(ctrl.chooseId, ctrl.update)">Put</button>
-<button class="btn btn-primary btn-md" ng-click="ctrl.del(ctrl.chooseId)">Delete</button>
 
 </body>

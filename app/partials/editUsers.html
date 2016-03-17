@@ -2,23 +2,6 @@
 	
 <header></header>
 
-<!-- test area moved to top to be deleted after build anyway -->
-<p>Id: <input type="text" ng-model="ctrl.chooseId"></p>
-
-<button class="btn btn-primary btn-md" ng-click="ctrl.getAll()">Get All</button>
-<button class="btn btn-primary btn-md" ng-click="ctrl.getOne(ctrl.chooseId)">Get One</button>
-<button class="btn btn-primary btn-md" ng-click="ctrl.post(ctrl.update)">Post</button>
-<button class="btn btn-primary btn-md" ng-click="ctrl.put(ctrl.chooseId, ctrl.update)">Put</button>
-<button class="btn btn-primary btn-md" ng-click="ctrl.del(ctrl.chooseId)">Delete</button>
-
-<div>
-	{{ctrl.users}}
-</div>
-
-<!-- test area moved to top to be deleted -->
-
-
-
 <div class="container">
 
 		<div class="row">
@@ -38,29 +21,6 @@
 										</div>
 									</div>
 
-									<div class="control-group form-group">
-					                    <div class="controls">
-					                    	<!-- angular input element -->
-					                    	<label>E-Mail</label>
-					                    	<!-- angular input element -->
-										<input type="email" name="email" class="form-control" required data-validation-required-message="Please enter your email" ng-model="ctrl.update.email">
-											<!-- angular input element -->
-											<p class="help-block">(required)</p>
-										</div>
-									</div>
-
-									<div class="control-group form-group">
-					                    <div class="controls">
-					                    	<!-- angular input element -->
-					                    	<label>Password</label>
-					                    	<!-- angular input element -->
-										<input type="text" class="form-control" id="email" required data-validation-required-message="Please enter your password" ng-model="ctrl.update.password">
-											<!-- angular input element -->
-											<p class="help-block">(required)</p>
-										</div>
-									</div>
-
-
 										<div class="control-group form-group">
 					                    <div class="controls">
 					                    <label>Photo</label>
@@ -69,11 +29,6 @@
 										<button ng-click="ctrl.upload(ctrl.update.image)">Upload File</button>
 										{{ctrl.update.image}}
 										</br>
-										</br>
-
-
-										<button class="btn btn-primary btn-md" ng-click="ctrl.post(ctrl.update)">Post</button>
-
 										</br>
 
 										<button class="btn btn-primary btn-md" ng-click="ctrl.createUser(ctrl.update)">Next</button>

@@ -30,7 +30,14 @@ angular
 				$http.post('/api/auth/register',user)
 				.then(function(res){
 					console.log(res);
-					ctrl.register_btn = res.data.msg;
+					$http.post('/api/auth/authenticate',user)
+					.then(function(res){
+						console.log(res);
+						localStorage.loginEmail = ctrl.email;
+						dbService.newAccount.user.email = ctrl.email;
+						ctrl.register_btn = res.data.msg;
+						$state.go("editUsers");
+					})
 				})
 			}
 			else{
@@ -56,6 +63,15 @@ angular
 			ctrl.testMsg = "Logged Out";
 			ctrl.register_btn = "Sign Up";
 			ctrl.auth_btn = 'Login';
+			dbService.newAccount = {
+				user: {
+					name: "",
+					email: "",
+					image: ""
+				},
+				brewery: "",
+				beers: []
+			};
 		}
 
 	}
