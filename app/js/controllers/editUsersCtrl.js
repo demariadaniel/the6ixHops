@@ -70,7 +70,7 @@ angular
 		});
 	};
 
-		function upload(file, path) {
+		function upload(file) {
 			file.upload = Upload.upload({
 				url: '/api/photo/',
 				data: {file: file}

@@ -33,8 +33,8 @@ angular
 					$http.post('/api/auth/authenticate',user)
 					.then(function(res){
 						console.log(res);
-						localStorage.loginEmail = ctrl.email;
-						dbService.newAccount.user.email = ctrl.email;
+						localStorage.loginEmail = ctrl.user.email;
+						ctrl.dbService.newAccount.user.email = ctrl.user.email;
 						ctrl.register_btn = res.data.msg;
 						$state.go("editUsers");
 					})
@@ -51,7 +51,7 @@ angular
 			$http.post('/api/auth/authenticate',user)
 			.then(function(res){
 				console.log(res);
-				localStorage.loginEmail = ctrl.email;
+				localStorage.loginEmail = user.email;
 				ctrl.auth_btn = res.data.msg;
 				ctrl.testMsg = "Logged In!"
 				$state.go("adminPanel");

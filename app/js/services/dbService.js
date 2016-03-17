@@ -8,12 +8,8 @@
 			this.selectItem = {};
 
 			this.newAccount = {
-				user: {
-					name: "",
-					email: "",
-					image: ""
-				},
-				brewery: "",
+				user: {},
+				brewery: {},
 				beers: []
 			};
 
