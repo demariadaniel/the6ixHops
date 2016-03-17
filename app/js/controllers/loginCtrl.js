@@ -3,6 +3,7 @@ angular
 	.controller('loginCtrl', loginCtrl);
 
 	function loginCtrl(dbService, $state, $http) {
+
 		var ctrl = this;
 
 			ctrl.testMsg = "Logged Out";

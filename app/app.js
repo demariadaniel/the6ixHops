@@ -1,9 +1,9 @@
 angular
 	.module('app',['ui.router', 'angular-jwt', 'ngFileUpload'])
 	.config(function($stateProvider, $urlRouterProvider, $httpProvider){
-
+​
 		$urlRouterProvider.otherwise('/home');
-
+​
 		$stateProvider
 			.state('home',{
 				url:'/home',
@@ -24,6 +24,13 @@ angular
 				url:'/breweries',
 				templateUrl:'/partials/breweries.html',
 				controller: 'breweriesCtrl as ctrl',
+				resolve: {
+					breweries: function(dbService) {
+						return dbService.getAll('/api/breweries/allBreweries').then(function(res){
+							return res;
+						});
+					}
+				}
 			})
 			.state('adminPanel',{
 				url:'/adminPanel',
@@ -33,7 +40,14 @@ angular
 			.state('beers',{
 				url:'/beers',
 				templateUrl:'/partials/beers.html',
-				controller: 'beersCtrl as ctrl'
+				controller: 'beersCtrl as ctrl',
+				resolve: {
+					beers: function(dbService) {
+						return dbService.getAll('/api/beers/allBeers').then(function(res){
+							return res;
+						});
+					}
+				}
 			})
 			.state('events',{
 				url:'/events',
@@ -65,7 +79,7 @@ angular
 				templateUrl:'/partials/editUsers.html',
 				controller: 'editUsersCtrl as ctrl'
 			})
-
+​
 			$httpProvider.interceptors.push(function(jwtHelper){
 				return {
 					request:function(config){

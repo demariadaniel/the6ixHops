@@ -1,7 +1,7 @@
 var express      = require('express');
 var router       = express.Router();
 var User = require('./../models/Users');
-
+​
 router.post('/login',function(req,res){
     var where = {email:req.body.email,password:req.body.password};
     User.find(where, function(err, User) {
@@ -18,17 +18,11 @@ router.post('/login',function(req,res){
             res.send(User);
         }
         }
-//         var user_obj = {email:user.email,id:user.id};
-//         var token = jwt.sign(user_obj,'Fv1f3Y37S3RorBbT4PumpWVHejaEYnGs');
-//             res.set('authentication',token);
-//             res.json({
-//                 user:user
-//             });
     });
 });
-
+​
 router.get('/allUsers', function(req, res){
-	console.log(".find");
+    console.log(".find");
     User.find({}, function(err, Users) {
         if (err) {
             console.log(err);
@@ -38,8 +32,8 @@ router.get('/allUsers', function(req, res){
         }
     });
 });
-
-
+​
+​
 router.get('/:id', function(req, res){
     console.log('Getting Product with ID: '+req.params.id);
     User.findById(req.params.id, function(err, user) {
@@ -52,14 +46,15 @@ router.get('/:id', function(req, res){
     });
     console.log('Running Id');
 });
-
-
+​
+​
 router.post('/newUser', function(req, res){
         console.log(".post");
         var newUser = User({
-        //	name: req.body.name,
+            name: req.body.name,
             email: req.body.email,
-        	password: req.body.password
+            password: req.body.password,
+            image: req.body.image
         });
         newUser.save(function (err){
             if (err) {
@@ -70,16 +65,17 @@ router.post('/newUser', function(req, res){
             }
         });
 });
-
+​
 router.put('/:id', function(req, res) {
-	var identify = req.params.id;
+    var identify = req.params.id;
     var query = { "_id": identify }
-	console.log("Update ID: " + identify);
-	var updateInfo = {
-            //    name: req.body.name,
+    console.log("Update ID: " + identify);
+    var updateInfo = {
+               name: req.body.name,
                 email: req.body.email,
                 password: req.body.password,
-    	};
+                image: req.body.image
+        };
     console.log(updateInfo);
     User.update(query,updateInfo,{},function(err,user){
         if(err){
@@ -91,10 +87,10 @@ router.put('/:id', function(req, res) {
         }
     });
 })
-
+​
 router.delete('/:id', function(req, res) {
-	var identify = req.params.id;
-  	User.findByIdAndRemove(identify, function (err, user) {
+    var identify = req.params.id;
+    User.findByIdAndRemove(identify, function (err, user) {
       if (err) {
             console.log(err);
         } else {
@@ -103,5 +99,5 @@ router.delete('/:id', function(req, res) {
         }
   });
 });
-
+​
 module.exports = router;

@@ -1,12 +1,12 @@
 angular
 	.module('app')
 	.controller('editUsersCtrl', editUsersCtrl);
-
-	function editUsersCtrl(dbService, $state) {
+​
+	function editUsersCtrl(dbService, $state, Upload) {
 		var ctrl = this;
 		//if (localStorage.authToken === undefined) {$state.go('login')};
-
-
+​
+​
 			ctrl.testMsg = "Edit C";
 			ctrl.dbService = dbService;
 			ctrl.users = [];
@@ -14,22 +14,24 @@ angular
 				name: "",
 				email: "",
 				password: "",
+				image: ""
 			}
-
+​
 			ctrl.createUser = createUser;
-
+​
 			ctrl.getAll = getAll;
 			ctrl.getOne = getOne;
 			ctrl.post = post;
 			ctrl.put = put;
 			ctrl.del = del;
-
+			ctrl.upload = upload;
+​
 		function createUser(newUser){
 			ctrl.dbService.newAccount.user = newUser;
 			console.log(ctrl.dbService.newAccount);
 			$state.go('editBreweries');
 		};
-
+​
 		function getAll(){
 			console.log("getAll");
 			var addr = '/api/users/allUsers';
@@ -37,7 +39,7 @@ angular
 					ctrl.users = res;
 			});
 		};
-
+​
 		function getOne(id){
 			var addr = '/api/users/';
 			dbService.getOne(addr, id).then(function(res){
@@ -45,7 +47,7 @@ angular
 					ctrl.users.push(res);
 			});
 		};
-
+​
 		function post(newUser){
 			console.log("post");
 			var addr = '/api/users/newUser';
@@ -53,7 +55,7 @@ angular
 				if (res) {ctrl.getAll()}
 			})
 		};
-
+​
 		function put(id, update){
 			console.log('PUT request id: ' + id);
 			var addr = '/api/users/';
@@ -61,7 +63,7 @@ angular
 			if (res) ctrl.getAll();
 		});
 	};
-
+​
 		function del(id){
 			console.log("del");
 			var addr = '/api/users/';
@@ -69,5 +71,17 @@ angular
 			if (res) ctrl.getAll();
 		});
 	};
-
+​
+		function upload(file, path) {
+			file.upload = Upload.upload({
+				url: '/api/photo/',
+				data: {file: file}
+			})
+			.then(function(res) {
+				ctrl.update.image = 'http://localhost:8080/uploads/' + res.data[0].filename;
+			}, function(err) {
+				console.log(err);
+			})
+		}
+​
 }

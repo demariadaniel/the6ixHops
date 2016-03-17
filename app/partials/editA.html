@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Users</title>
+</head>
+<body>
+
+<div>
+	{{ctrl.users}}
+</div>
+
+<p>Email: <input type="text" ng-model="ctrl.update.email"></p>
+<p>Password: <input type="text" ng-model="ctrl.update.password"></p>
+
+<p>Id: <input type="text" ng-model="ctrl.chooseId"></p>
+
+<button ng-click="ctrl.getAll()">Get All</button>
+<button ng-click="ctrl.getOne(ctrl.chooseId)">Get One</button>
+<button ng-click="ctrl.post(ctrl.update)">Post</button>
+<button ng-click="ctrl.put(ctrl.chooseId, ctrl.update)">Put</button>
+<button ng-click="ctrl.del(ctrl.chooseId)">Delete</button>
+
+</body>
+</html>
