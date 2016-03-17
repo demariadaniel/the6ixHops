@@ -22,9 +22,6 @@ var BeerSchema = new Schema ({
 	sizes:{
 		type: String,
 	},
-	price:{
-		type: String,
-	},
 	strength:{
 		type: String,
 	},
@@ -35,9 +32,6 @@ var BeerSchema = new Schema ({
 		type: String,
 	},
 	pairs_well:{
-		type: String,
-	},
-	draft:{
 		type: String,
 	}
 });

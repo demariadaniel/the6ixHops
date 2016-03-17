@@ -38,12 +38,10 @@ router.post('/newBeer', function(req, res){
                 image: req.body.image,
                 description: req.body.description,
                 sizes: req.body.sizes,
-                price: req.body.price,
                 strength: req.body.strength,
                 available: req.body.available,
                 ingredients: req.body.ingredients,
-                pairs_well: req.body.pairs_well,
-                draft: req.body.draft
+                pairs_well: req.body.pairs_well
         });
         newBeer.save(function (err){
             if (err) {
@@ -66,12 +64,10 @@ router.put('/:id', function(req, res) {
                 image: req.body.image,
                 description: req.body.description,
                 sizes: req.body.sizes,
-                price: req.body.price,
                 strength: req.body.strength,
                 available: req.body.available,
                 ingredients: req.body.ingredients,
                 pairs_well: req.body.pairs_well,
-                draft: req.body.draft
     	};
     console.log(updateInfo);
     Beer.update(query,updateInfo,{},function(err,beer){

@@ -2,7 +2,7 @@ angular
 	.module('app')
 	.controller('editUsersCtrl', editUsersCtrl);
 
-	function editUsersCtrl(dbService, $state) {
+	function editUsersCtrl(dbService, $state, Upload) {
 		var ctrl = this;
 		//if (localStorage.authToken === undefined) {$state.go('login')};
 
@@ -14,6 +14,7 @@ angular
 				name: "",
 				email: "",
 				password: "",
+				image: ""
 			}
 
 			ctrl.createUser = createUser;
@@ -23,6 +24,7 @@ angular
 			ctrl.post = post;
 			ctrl.put = put;
 			ctrl.del = del;
+			ctrl.upload = upload;
 
 		function createUser(newUser){
 			ctrl.dbService.newAccount.user = newUser;
@@ -69,5 +71,17 @@ angular
 			if (res) ctrl.getAll();
 		});
 	};
+
+		function upload(file, path) {
+			file.upload = Upload.upload({
+				url: '/api/photo/',
+				data: {file: file}
+			})
+			.then(function(res) {
+				ctrl.update.image = 'http://localhost:8080/uploads/' + res.data[0].filename;
+			}, function(err) {
+				console.log(err);
+			})
+		}
 
 }

@@ -60,9 +60,9 @@
 		                        	<!-- angular input element -->
 		                        	<legend>Main Image</legend>
 
-		                        	<input ngf-select name="userPhoto" accept="image/*" ngf-max-size="2MB" type="file" ng-model="ctrl.photo">
+		                        	<input ngf-select name="beerPhoto" accept="image/*" ngf-max-size="2MB" type="file" ng-model="ctrl.update.image">
 		                        	</br>
-									<button ng-click="ctrl.upload(ctrl.photo)">Upload File</button>
+									<button ng-click="ctrl.upload(ctrl.update.image)">Upload File</button>
 		                        	<!-- angular input element -->
 								<!-- <input type="text" class="form-control" id="brewery" required data-validation-required-message="Please enter the main image." ng-model="ctrl.update.image"> -->
 									<!-- angular input element -->
@@ -83,10 +83,7 @@
 		                        <div class="controls">
 		                        	<!-- angular input element -->
 		                        	<legend>Sizes Available</legend>
-								<input type="checkbox" name="size" value="can" ng-model="ctrl.update.sizes"> &nbsp Can<br>
-                                <input type="checkbox" name="size" value="bottle" checked ng-model="ctrl.update.sizes"> &nbsp Bottle<br>
-                                <input type="checkbox" name="size" value="braught" checked ng-model="ctrl.update.sizes"> &nbsp Draught<br>
-
+								<input type="text" name="size" ng-model="ctrl.update.sizes">
 
 									<!-- angular input element -->
 									<p class="help-block"></p>
@@ -156,8 +153,14 @@
 			</div>	
 	</div>
 
+<div>
+	<p>Your Beers:</p>
+	<p ng-repeat="beer in ctrl.beers">{{beer.name}}</p>
+</div>
 
-<button class="btn btn-primary btn-md" ng-click="ctrl.createBeer(ctrl.update)">Next</button>
+
+<button class="btn btn-primary btn-md" ng-click="ctrl.createBeer(ctrl.update)">Add Beer</button>
+<button class="btn btn-primary btn-md" ng-click="ctrl.finish(ctrl.beers)">Finish</button>
 
 
 <p>Select by Id: <input type="text" ng-model="ctrl.chooseId"></p>

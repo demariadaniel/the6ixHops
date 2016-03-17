@@ -63,11 +63,11 @@
 
 										<div class="control-group form-group">
 					                    <div class="controls">
-
-										<input ngf-select name="userPhoto" accept="image/*" ngf-max-size="2MB" type="file" ng-model="ctrl.photo">
+					                    <label>Photo</label>
+										<input ngf-select name="userPhoto" accept="image/*" ngf-max-size="2MB" type="file" ng-model="ctrl.update.image">
 										</br>
-										<button ng-click="ctrl.upload(ctrl.photo)">Upload File</button>
-
+										<button ng-click="ctrl.upload(ctrl.update.image)">Upload File</button>
+										{{ctrl.update.image}}
 										</br>
 										</br>
 

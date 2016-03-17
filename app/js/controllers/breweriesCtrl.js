@@ -2,15 +2,16 @@ angular
 	.module('app')
 	.controller('breweriesCtrl', breweriesCtrl);
 
-	function breweriesCtrl(dbService, $state) {
+	function breweriesCtrl(dbService, $state, breweries) {
 		var ctrl = this;
 
+			ctrl.breweries = breweries;
 			ctrl.state = $state;
 			ctrl.dbService = dbService;
 			ctrl.getAll = getAll;
 			ctrl.goToDetails = goToDetails;
 	
-			getAll();
+			//getAll();
 
 		function getAll(){
 			var addr = '/api/breweries/allBreweries';

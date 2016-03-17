@@ -1,0 +1,26 @@
+superuser:
+	*beers are not posting
+	*image upload is not working
+	#some forms are meant to have drop downs 
+		beer: type, available, description should be text area
+		breweries: descripton text area
+	*make sure page is populating database
+	*remove beer price
+
+creation:
+	#remove post/backend buttons, id selector, {{}} beneath buttons
+	*image upload -- user, beer
+	#beer sizes are broken
+	*post creations to database
+	*make more than one beer
+	#remove price on beer
+	#change time of year
+
+user page:
+	#final display -- all angular binding
+	#homepage link to user page -- specific link to admin panel
+		* if not logged in redirect to login
+	# logout button on admin page
+		* logout function
+	# social links - change linkedin to instagram on user admin panel 
+	# link to social media pages via buttons

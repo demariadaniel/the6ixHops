@@ -2,10 +2,9 @@ angular
 	.module('app')
 	.controller('editBeersCtrl', editBeersCtrl);
 
-	function editBeersCtrl(dbService, $state) {
+	function editBeersCtrl(dbService, $state, Upload) {
 		var ctrl = this;
 		if (localStorage.authToken === undefined) {$state.go('login')};
-
 
 			ctrl.testMsg = "Edit B";
 			ctrl.dbService = dbService;
@@ -17,14 +16,13 @@ angular
 				image: "",
 				description: "",
 				sizes: "",
-				price: "",
 				strength: "",
 				available: "",
 				ingredients: "",
 				pairs_well: "",
-				draft: ""
 			}
 			ctrl.createBeer = createBeer;
+			ctrl.finish = finish;
 
 			ctrl.getAll = getAll;
 			ctrl.getOne = getOne;
@@ -32,9 +30,32 @@ angular
 			ctrl.put = put;
 			ctrl.del = del;
 
-		function createBeer(newBeer){
-			ctrl.dbService.newAccount.beer = newBeer;
+		function createBeer(beer){
+			ctrl.beers.push(beer);
+			ctrl.update = {
+				name: "",
+				brewery: "",
+				type: "",
+				image: "",
+				description: "",
+				sizes: "",
+				strength: "",
+				available: "",
+				ingredients: "",
+				pairs_well: "",
+			};
+		}
+
+		function finish(beers){
+			ctrl.dbService.newAccount.beers = beers;
 			console.log(ctrl.dbService.newAccount);
+			dbService.post('/api/users/newUser', dbService.newAccount.user);
+			dbService.post('/api/breweries/newBrewery', dbService.newAccount.brewery);
+			for (var n = 0; n<dbService.newAccount.beers.length; n++){
+					var beer = dbService.newAccount.beers[n];
+					console.log(beer);
+					dbService.post('/api/beers/newBeer', beer);
+			}
 			$state.go("adminPanel");
 		};
 
@@ -78,5 +99,18 @@ angular
 			if (res) ctrl.getAll();
 		});
 	};
+
+		function upload(file, path) {
+		file.upload = Upload.upload({
+			url: '/api/photo/',
+			data: {file: file}
+		})
+		.then(function(res) {
+					ctrl.update.image = 'http://localhost:8080/uploads/' + res.data[0].filename;
+		}, function(err) {
+			console.log(err);
+		})
+	}
+
 
 }

@@ -4,16 +4,20 @@
 		{{ctrl.users}}
 	</div>
 
+	<p>Name: <input type="text" ng-model="ctrl.user.name"></p>
 	<p>Email: <input type="text" ng-model="ctrl.user.email"></p>
 	<p>Password: <input type="text" ng-model="ctrl.user.password"></p>
+	<p>Image: <input ngf-select name="userPhoto" accept="image/*" ngf-max-size="2MB" type="file" ng-model="ctrl.user.image"></p>
+	<button ng-click="ctrl.upload(ctrl.user.image, 'user_image')">Upload File</button>
+	{{ctrl.user.image}}
 
-	<p>Id: <input type="text" ng-model="ctrl.chooseId"></p>
+	<p>Id: <input type="text" ng-model="ctrl.chooseIdA"></p>
 
-	<button ng-click="ctrl.getAll('/api/users/allUsers')">Get All</button>
-	<button ng-click="ctrl.getOne('/api/users/', ctrl.chooseId)">Get One</button>
-	<button ng-click="ctrl.post('/api/users/newUser', ctrl.update)">Post</button>
-	<button ng-click="ctrl.put('/api/users/', ctrl.chooseId, ctrl.update)">Put</button>
-	<button ng-click="ctrl.del('/api/users/', ctrl.chooseId)">Delete</button>
+	<button ng-click="ctrl.getAllUsers()">Get All</button>
+	<button ng-click="ctrl.getOneUser('/api/users/', ctrl.chooseIdA)">Get One</button>
+	<button ng-click="ctrl.postUser('/api/users/newUser', ctrl.user)">Post</button>
+	<button ng-click="ctrl.putUser('/api/users/', ctrl.chooseIdA, ctrl.user)">Put</button>
+	<button ng-click="ctrl.delUser('/api/users/', ctrl.chooseIdA)">Delete</button>
 </div>
 
 <div>
@@ -29,10 +33,10 @@
 	<p>Postcode: <input type="text" ng-model="ctrl.brewery.postcode"></p>
 	<p>Telephone: <input type="text" ng-model="ctrl.brewery.telephone"></p>
 	<p>Email: <input type="text" ng-model="ctrl.brewery.email"></p>
-	<p>Image Thumb: <input type="text" ng-model="ctrl.brewery.image_thumb"></p>
+	<p>Image Thumb: <input ngf-select name="brewThumbPhoto" accept="image/*" ngf-max-size="2MB" type="file" ng-model="ctrl.brewery.image_thumb"></p>
 	<button ng-click="ctrl.upload(ctrl.brewery.image_thumb, 'image_thumb')">Upload File</button>
 	{{ctrl.brewery.image_thumb}}
-	<p>Image Main: <input type="text" ng-model="ctrl.brewery.image_main"></p>
+	<p>Image Main: <input ngf-select name="brewMainPhoto" accept="image/*" ngf-max-size="2MB" type="file" ng-model="ctrl.brewery.image_main"></p>
 	<button ng-click="ctrl.upload(ctrl.brewery.image_main, 'image_main')">Upload File</button>
 	{{ctrl.brewery.image_main}}
 	<p>Hours: <input type="text" ng-model="ctrl.brewery.hours"></p>
@@ -40,14 +44,13 @@
 	<p>Facebook: <input type="text" ng-model="ctrl.brewery.facebook"></p>
 	<p>Instagram: <input type="text" ng-model="ctrl.brewery.instagram"></p>
 
+	<p>Id: <input type="text" ng-model="ctrl.chooseIdB"></p>
 
-	<p>Id: <input type="text" ng-model="ctrl.chooseId"></p>
-
-	<button ng-click="ctrl.getAll('/api/breweries/allBreweries')">Get All</button>
-	<button ng-click="ctrl.getOne('/api/breweries/', ctrl.chooseId)">Get One</button>
-	<button ng-click="ctrl.post('/api/breweries/newBrewery', ctrl.beer)">Post</button>
-	<button ng-click="ctrl.put('/api/breweries/', ctrl.chooseId, ctrl.brewery)">Put</button>
-	<button ng-click="ctrl.del('/api/breweries/', ctrl.chooseId)">Delete</button>
+	<button ng-click="ctrl.getAllBreweries()">Get All</button>
+	<button ng-click="ctrl.getOneBrewery('/api/breweries/', ctrl.chooseIdB)">Get One</button>
+	<button ng-click="ctrl.postBrewery('/api/breweries/newBrewery', ctrl.brewery)">Post</button>
+	<button ng-click="ctrl.putBrewery('/api/breweries/', ctrl.chooseIdB, ctrl.brewery)">Put</button>
+	<button ng-click="ctrl.delBrewery('/api/breweries/', ctrl.chooseIdB)">Delete</button>
 </div>
 
 <div>
@@ -59,23 +62,23 @@
 	<p>Name: <input type="text" ng-model="ctrl.beer.name"></p>
 	<p>Brewery: <input type="text" ng-model="ctrl.beer.brewery"></p>
 	<p>Type: <input type="text" ng-model="ctrl.beer.type"></p>
-	<p>Image: <input type="text" ng-model="ctrl.beer.image"></p>
+	<p>Image: <input ngf-select name="beerPhoto" accept="image/*" ngf-max-size="2MB" type="file" ng-model="ctrl.beer.image"></p>
+	<button ng-click="ctrl.upload(ctrl.beer.image, 'beer_image')">Upload File</button>
+	{{ctrl.beer.image}}
 	<p>Description: <input type="text" ng-model="ctrl.beer.description"></p>
 	<p>Sizes: <input type="text" ng-model="ctrl.beer.sizes"></p>
-	<p>Price: <input type="text" ng-model="ctrl.beer.price"></p>
 	<p>Strength: <input type="text" ng-model="ctrl.beer.strength"></p>
 	<p>Available: <input type="text" ng-model="ctrl.beer.available"></p>
 	<p>Ingredients: <input type="text" ng-model="ctrl.beer.ingredients"></p>
 	<p>Pairs Well: <input type="text" ng-model="ctrl.beer.pairs_well"></p>
 	<p>Draft: <input type="text" ng-model="ctrl.beer.draft"></p>
 
+	<p>Id: <input type="text" ng-model="ctrl.chooseIdC"></p>
 
-	<p>Id: <input type="text" ng-model="ctrl.chooseId"></p>
-
-	<button ng-click="ctrl.getAll('/api/beers/allBeers')">Get All</button>
-	<button ng-click="ctrl.getOne('/api/beers/', ctrl.chooseId)">Get One</button>
-	<button ng-click="ctrl.post('/api/beers/newBeer', ctrl.beer)">Post</button>
-	<button ng-click="ctrl.put('/api/beers/', ctrl.chooseId, ctrl.beer)">Put</button>
-	<button ng-click="ctrl.del('/api/beers/', ctrl.chooseId)">Delete</button>
+	<button ng-click="ctrl.getAllBeers()">Get All</button>
+	<button ng-click="ctrl.getOneBeer('/api/beers/', ctrl.chooseIdC)">Get One</button>
+	<button ng-click="ctrl.postBeer('/api/beers/newBeer', ctrl.beer)">Post</button>
+	<button ng-click="ctrl.putBeer('/api/beers/', ctrl.chooseIdC, ctrl.beer)">Put</button>
+	<button ng-click="ctrl.delBeer('/api/beers/', ctrl.chooseIdC)">Delete</button>
 </div>
 
