@@ -29,6 +29,7 @@ angular
 			ctrl.post = post;
 			ctrl.put = put;
 			ctrl.del = del;
+			ctrl.upload = upload;
 
 		function createBeer(beer){
 			ctrl.beers.push(beer);
@@ -47,6 +48,7 @@ angular
 		}
 
 		function finish(beers){
+			ctrl.createBeer(ctrl.update);
 			ctrl.dbService.newAccount.beers = beers;
 			console.log(ctrl.dbService.newAccount);
 			dbService.post('/api/users/newUser', dbService.newAccount.user);
@@ -100,7 +102,7 @@ angular
 		});
 	};
 
-		function upload(file, path) {
+		function upload(file) {
 		file.upload = Upload.upload({
 			url: '/api/photo/',
 			data: {file: file}

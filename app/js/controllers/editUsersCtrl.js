@@ -4,16 +4,13 @@ angular
 
 	function editUsersCtrl(dbService, $state, Upload) {
 		var ctrl = this;
-		//if (localStorage.authToken === undefined) {$state.go('login')};
-
+		if (localStorage.authToken === undefined) {$state.go('login')};
 
 			ctrl.testMsg = "Edit C";
 			ctrl.dbService = dbService;
 			ctrl.users = [];
 			ctrl.update = {
 				name: "",
-				email: "",
-				password: "",
 				image: ""
 			}
 
@@ -27,7 +24,8 @@ angular
 			ctrl.upload = upload;
 
 		function createUser(newUser){
-			ctrl.dbService.newAccount.user = newUser;
+			ctrl.dbService.newAccount.user.name = ctrl.update.name;
+			ctrl.dbService.newAccount.user.name = ctrl.update.image;
 			console.log(ctrl.dbService.newAccount);
 			$state.go('editBreweries');
 		};
