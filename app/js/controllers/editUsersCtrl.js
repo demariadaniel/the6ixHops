@@ -25,7 +25,7 @@ angular
 
 		function createUser(newUser){
 			ctrl.dbService.newAccount.user.name = ctrl.update.name;
-			ctrl.dbService.newAccount.user.name = ctrl.update.image;
+			ctrl.dbService.newAccount.user.image = ctrl.update.image;
 			console.log(ctrl.dbService.newAccount);
 			$state.go('editBreweries');
 		};
