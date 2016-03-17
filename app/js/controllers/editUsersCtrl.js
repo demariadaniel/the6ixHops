@@ -25,7 +25,7 @@ angular
 
 		function createUser(newUser){
 			ctrl.dbService.newAccount.user.name = ctrl.update.name;
-			ctrl.dbService.newAccount.user.name = ctrl.update.image;
+			ctrl.dbService.newAccount.user.image = ctrl.update.image;
 			console.log(ctrl.dbService.newAccount);
 			$state.go('editBreweries');
 		};
@@ -70,7 +70,7 @@ angular
 		});
 	};
 
-		function upload(file, path) {
+		function upload(file) {
 			file.upload = Upload.upload({
 				url: '/api/photo/',
 				data: {file: file}
