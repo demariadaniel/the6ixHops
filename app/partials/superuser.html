@@ -1,81 +1,121 @@
-<div>
-	<h1>Users</h1>
-	<div>
-		{{ctrl.users}}
-	</div>
+<div class="container">
 
-	<p>Email: <input type="text" ng-model="ctrl.user.email"></p>
-	<p>Password: <input type="text" ng-model="ctrl.user.password"></p>
+		<div class="row">
 
-	<p>Id: <input type="text" ng-model="ctrl.chooseId"></p>
+		        <div class="col-md-8">
 
-	<button ng-click="ctrl.getAll('/api/users/allUsers')">Get All</button>
-	<button ng-click="ctrl.getOne('/api/users/', ctrl.chooseId)">Get One</button>
-	<button ng-click="ctrl.post('/api/users/newUser', ctrl.update)">Post</button>
-	<button ng-click="ctrl.put('/api/users/', ctrl.chooseId, ctrl.update)">Put</button>
-	<button ng-click="ctrl.del('/api/users/', ctrl.chooseId)">Delete</button>
-</div>
+							<div class="control-group form-group">
+					            <div class="controls">
 
-<div>
-	<h1>Breweries</h1>
-	<div>
-		{{ctrl.breweries}}
-	</div>
+					            	<h1>Users</h1>
+										<div>
+											{{ctrl.users}}
+										</div>
+					            	<fieldset>
+									<p>Email: <input class="form-control" type="text" ng-model="ctrl.user.email"></p>
+									<p>Password: <input class="form-control" type="text" ng-model="ctrl.user.password"></p>
 
-	<p>Name: <input type="text" ng-model="ctrl.brewery.name"></p>
-	<p>Street: <input type="text" ng-model="ctrl.brewery.street"></p>
-	<p>City: <input type="text" ng-model="ctrl.brewery.city"></p>
-	<p>Province: <input type="text" ng-model="ctrl.brewery.province"></p>
-	<p>Postcode: <input type="text" ng-model="ctrl.brewery.postcode"></p>
-	<p>Telephone: <input type="text" ng-model="ctrl.brewery.telephone"></p>
-	<p>Email: <input type="text" ng-model="ctrl.brewery.email"></p>
-	<p>Image Thumb: <input type="text" ng-model="ctrl.brewery.image_thumb"></p>
-	<button ng-click="ctrl.upload(ctrl.brewery.image_thumb, 'image_thumb')">Upload File</button>
-	{{ctrl.brewery.image_thumb}}
-	<p>Image Main: <input type="text" ng-model="ctrl.brewery.image_main"></p>
-	<button ng-click="ctrl.upload(ctrl.brewery.image_main, 'image_main')">Upload File</button>
-	{{ctrl.brewery.image_main}}
-	<p>Hours: <input type="text" ng-model="ctrl.brewery.hours"></p>
-	<p>Twitter: <input type="text" ng-model="ctrl.brewery.twitter"></p>
-	<p>Facebook: <input type="text" ng-model="ctrl.brewery.facebook"></p>
-	<p>Instagram: <input type="text" ng-model="ctrl.brewery.instagram"></p>
+									<p>Id: <input class="form-control" type="text" ng-model="ctrl.chooseId"></p>
+
+									<button ng-click="ctrl.getAll('/api/users/allUsers')">Get All</button>
+									<button ng-click="ctrl.getOne('/api/users/', ctrl.chooseId)">Get One</button>
+									<button ng-click="ctrl.post('/api/users/newUser', ctrl.update)">Post</button>
+									<button ng-click="ctrl.put('/api/users/', ctrl.chooseId, ctrl.update)">Put</button>
+									<button ng-click="ctrl.del('/api/users/', ctrl.chooseId)">Delete</button>
+									</fieldset>
+								</div>
+							</div>
+						
+						
+							
+
+						<div class="control-group form-group">
+				            <div class="controls">
+
+				            	<h1>Breweries</h1>
+									<div>
+										{{ctrl.breweries}}
+									</div>
+					            	<fieldset>
+									<p>Name: <input class="form-control" type="text" ng-model="ctrl.brewery.name"></p>
+									<p>Street: <input class="form-control" type="text" ng-model="ctrl.brewery.street"></p>
+									<p>City: <input class="form-control" type="text" ng-model="ctrl.brewery.city"></p>
+									<p>Province: <input class="form-control" type="text" ng-model="ctrl.brewery.province"></p>
+									<p>Postcode: <input class="form-control" type="text" ng-model="ctrl.brewery.postcode"></p>
+									<p>Telephone: <input class="form-control" type="text" ng-model="ctrl.brewery.telephone"></p>
+									<p>Email: <input class="form-control" type="text" ng-model="ctrl.brewery.email"></p>
+									</br>
+									</fieldset>
+									<fieldset>
+									<p>Image Thumb: <input class="form-control" type="text" ng-model="ctrl.brewery.image_thumb"></p>
+									<button ng-click="ctrl.upload(ctrl.brewery.image_thumb, 'image_thumb')">Upload File</button>
+									{{ctrl.brewery.image_thumb}}
+									</br>
+									<p>Image Main: <input class="form-control" type="text" ng-model="ctrl.brewery.image_main"></p>
+									<button ng-click="ctrl.upload(ctrl.brewery.image_main, 'image_main')">Upload File</button>
+									{{ctrl.brewery.image_main}}
+									</fieldset>
+									<fieldset>
+									</br>
+									</br>
+									<p>Hours: <input class="form-control" type="text" ng-model="ctrl.brewery.hours"></p>
+									<p>Twitter: <input class="form-control" type="text" ng-model="ctrl.brewery.twitter"></p>
+									<p>Facebook: <input class="form-control" type="text" ng-model="ctrl.brewery.facebook"></p>
+									<p>Instagram: <input class="form-control" type="text" ng-model="ctrl.brewery.instagram"></p>
+									</fieldset>
+					
+
+									<p>Id: <input  class="form-control" type="text" ng-model="ctrl.chooseId"></p>
+
+									<button ng-click="ctrl.getAll('/api/breweries/allBreweries')">Get All</button>
+									<button ng-click="ctrl.getOne('/api/breweries/', ctrl.chooseId)">Get One</button>
+									<button ng-click="ctrl.post('/api/breweries/newBrewery', ctrl.beer)">Post</button>
+									<button ng-click="ctrl.put('/api/breweries/', ctrl.chooseId, ctrl.brewery)">Put</button>
+									<button ng-click="ctrl.del('/api/breweries/', ctrl.chooseId)">Delete</button>
+							
+								</div>
+						</div>
+
+					
+						
+
+						<div class="control-group form-group">
+					            <div class="controls">
+
+					            	<h1>Beers</h1>
+										<div>
+											{{ctrl.beers}}
+										</div>
+					            	<fieldset>
+									<p>Name: <input class="form-control" type="text" ng-model="ctrl.beer.name"></p>
+									<p>Brewery: <input class="form-control" type="text" ng-model="ctrl.beer.brewery"></p>
+									<p>Type: <input class="form-control" type="text" ng-model="ctrl.beer.type"></p>
+									<p>Image: <input class="form-control" type="text" ng-model="ctrl.beer.image"></p>
+									<p>Description: <input class="form-control" type="text" ng-model="ctrl.beer.description"></p>
+									<p>Sizes: <input class="form-control" type="text" ng-model="ctrl.beer.sizes"></p>
+									<p>Price: <input class="form-control" type="text" ng-model="ctrl.beer.price"></p>
+									<p>Strength: <input class="form-control" type="text" ng-model="ctrl.beer.strength"></p>
+									<p>Available: <input class="form-control" type="text" ng-model="ctrl.beer.available"></p>
+									<p>Ingredients: <input class="form-control" type="text" ng-model="ctrl.beer.ingredients"></p>
+									<p>Pairs Well: <input class="form-control" type="text" ng-model="ctrl.beer.pairs_well"></p>
+									<p>Draft: <input class="form-control" type="text" ng-model="ctrl.beer.draft"></p>
+									</fieldset>
+								
 
 
-	<p>Id: <input type="text" ng-model="ctrl.chooseId"></p>
 
-	<button ng-click="ctrl.getAll('/api/breweries/allBreweries')">Get All</button>
-	<button ng-click="ctrl.getOne('/api/breweries/', ctrl.chooseId)">Get One</button>
-	<button ng-click="ctrl.post('/api/breweries/newBrewery', ctrl.beer)">Post</button>
-	<button ng-click="ctrl.put('/api/breweries/', ctrl.chooseId, ctrl.brewery)">Put</button>
-	<button ng-click="ctrl.del('/api/breweries/', ctrl.chooseId)">Delete</button>
-</div>
+									<p>Id: <input class="form-control" type="text" ng-model="ctrl.chooseId"></p>
 
-<div>
-	<h1>Beers</h1>
-	<div>
-		{{ctrl.beers}}
-	</div>
+									<button ng-click="ctrl.getAll('/api/beers/allBeers')">Get All</button>
+									<button ng-click="ctrl.getOne('/api/beers/', ctrl.chooseId)">Get One</button>
+									<button ng-click="ctrl.post('/api/beers/newBeer', ctrl.beer)">Post</button>
+									<button ng-click="ctrl.put('/api/beers/', ctrl.chooseId, ctrl.beer)">Put</button>
+									<button ng-click="ctrl.del('/api/beers/', ctrl.chooseId)">Delete</button>
+							
+								</div>
+						</div>
 
-	<p>Name: <input type="text" ng-model="ctrl.beer.name"></p>
-	<p>Brewery: <input type="text" ng-model="ctrl.beer.brewery"></p>
-	<p>Type: <input type="text" ng-model="ctrl.beer.type"></p>
-	<p>Image: <input type="text" ng-model="ctrl.beer.image"></p>
-	<p>Description: <input type="text" ng-model="ctrl.beer.description"></p>
-	<p>Sizes: <input type="text" ng-model="ctrl.beer.sizes"></p>
-	<p>Price: <input type="text" ng-model="ctrl.beer.price"></p>
-	<p>Strength: <input type="text" ng-model="ctrl.beer.strength"></p>
-	<p>Available: <input type="text" ng-model="ctrl.beer.available"></p>
-	<p>Ingredients: <input type="text" ng-model="ctrl.beer.ingredients"></p>
-	<p>Pairs Well: <input type="text" ng-model="ctrl.beer.pairs_well"></p>
-	<p>Draft: <input type="text" ng-model="ctrl.beer.draft"></p>
-
-
-	<p>Id: <input type="text" ng-model="ctrl.chooseId"></p>
-
-	<button ng-click="ctrl.getAll('/api/beers/allBeers')">Get All</button>
-	<button ng-click="ctrl.getOne('/api/beers/', ctrl.chooseId)">Get One</button>
-	<button ng-click="ctrl.post('/api/beers/newBeer', ctrl.beer)">Post</button>
-	<button ng-click="ctrl.put('/api/beers/', ctrl.chooseId, ctrl.beer)">Put</button>
-	<button ng-click="ctrl.del('/api/beers/', ctrl.chooseId)">Delete</button>
+				</div>
+		</div>	
 </div>
 
