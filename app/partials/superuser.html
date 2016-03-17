@@ -11,7 +11,7 @@
 										<div>
 											{{ctrl.users}}
 										</div>
-					            	<fieldset>
+					            	
 									<p>Email: <input class="form-control" type="text" ng-model="ctrl.user.email"></p>
 									<p>Password: <input class="form-control" type="text" ng-model="ctrl.user.password"></p>
 
@@ -22,12 +22,10 @@
 									<button ng-click="ctrl.post('/api/users/newUser', ctrl.update)">Post</button>
 									<button ng-click="ctrl.put('/api/users/', ctrl.chooseId, ctrl.update)">Put</button>
 									<button ng-click="ctrl.del('/api/users/', ctrl.chooseId)">Delete</button>
-									</fieldset>
+									
 								</div>
 							</div>
 						
-						
-							
 
 						<div class="control-group form-group">
 				            <div class="controls">
@@ -36,7 +34,7 @@
 									<div>
 										{{ctrl.breweries}}
 									</div>
-					            	<fieldset>
+					            	
 									<p>Name: <input class="form-control" type="text" ng-model="ctrl.brewery.name"></p>
 									<p>Street: <input class="form-control" type="text" ng-model="ctrl.brewery.street"></p>
 									<p>City: <input class="form-control" type="text" ng-model="ctrl.brewery.city"></p>
@@ -45,8 +43,8 @@
 									<p>Telephone: <input class="form-control" type="text" ng-model="ctrl.brewery.telephone"></p>
 									<p>Email: <input class="form-control" type="text" ng-model="ctrl.brewery.email"></p>
 									</br>
-									</fieldset>
-									<fieldset>
+									
+				                    <p>Description</p><textarea type="text" rows="4" cols="50" class="form-control" name="description" required data-validation-required-message="Please enter a description." ng-model="ctrl.update.desription"> Enter text here...</textarea>
 									<p>Image Thumb: <input class="form-control" type="text" ng-model="ctrl.brewery.image_thumb"></p>
 									<button ng-click="ctrl.upload(ctrl.brewery.image_thumb, 'image_thumb')">Upload File</button>
 									{{ctrl.brewery.image_thumb}}
@@ -54,16 +52,13 @@
 									<p>Image Main: <input class="form-control" type="text" ng-model="ctrl.brewery.image_main"></p>
 									<button ng-click="ctrl.upload(ctrl.brewery.image_main, 'image_main')">Upload File</button>
 									{{ctrl.brewery.image_main}}
-									</fieldset>
-									<fieldset>
 									</br>
 									</br>
 									<p>Hours: <input class="form-control" type="text" ng-model="ctrl.brewery.hours"></p>
 									<p>Twitter: <input class="form-control" type="text" ng-model="ctrl.brewery.twitter"></p>
 									<p>Facebook: <input class="form-control" type="text" ng-model="ctrl.brewery.facebook"></p>
 									<p>Instagram: <input class="form-control" type="text" ng-model="ctrl.brewery.instagram"></p>
-									</fieldset>
-					
+														
 
 									<p>Id: <input  class="form-control" type="text" ng-model="ctrl.chooseId"></p>
 
@@ -76,8 +71,6 @@
 								</div>
 						</div>
 
-					
-						
 
 						<div class="control-group form-group">
 					            <div class="controls">
@@ -86,24 +79,60 @@
 										<div>
 											{{ctrl.beers}}
 										</div>
-					            	<fieldset>
+					            	
 									<p>Name: <input class="form-control" type="text" ng-model="ctrl.beer.name"></p>
 									<p>Brewery: <input class="form-control" type="text" ng-model="ctrl.beer.brewery"></p>
-									<p>Type: <input class="form-control" type="text" ng-model="ctrl.beer.type"></p>
+
+									<!-- type edit old version -->
+									<!-- <p>Type: <input class="form-control" type="text" ng-model="ctrl.beer.type"></p> -->
+									<!-- type edit old version-->
+										
+									<!-- type edit new version -->	
+		                        
+		                        	<legend>Type</legend>
+									  <select id="selectbasic" name="selectbasic" class="form-control" ng-model="ctrl.beer.type">
+								      <option value="IPA">IPA</option>
+								      <option value="Pilsner">Pilsner</option>
+								      <option value="Porter">Porter</option>
+								      <option value="Ale">Ale</option>
+								      <option value="Lager">Lager</option>
+								      <option value="Blonde">Blonde</option>
+								      <option value="Wheat">Wheat</option>
+								      <option value="SpecialtyBeer">Speciality Beer</option>
+								    </select>
+										   
+									<!-- type edit new version -->
+
 									<p>Image: <input class="form-control" type="text" ng-model="ctrl.beer.image"></p>
 									<p>Description: <input class="form-control" type="text" ng-model="ctrl.beer.description"></p>
 									<p>Sizes: <input class="form-control" type="text" ng-model="ctrl.beer.sizes"></p>
 									<p>Price: <input class="form-control" type="text" ng-model="ctrl.beer.price"></p>
 									<p>Strength: <input class="form-control" type="text" ng-model="ctrl.beer.strength"></p>
+
+									<!-- available edit old version -->
+
 									<p>Available: <input class="form-control" type="text" ng-model="ctrl.beer.available"></p>
+
+									<!-- available edit old version -->
+
+									<!-- available edit new version -->
+
+									<p>Available:</p>
+								      <select id="selectbasic" name="selectbasic" class="form-control" ng-model="ctrl.beer.available">
+								      <option value="Spring">Spring</option>
+								      <option value="Summer">Summer</option>
+								      <option value="Autmn">Autumn</option>
+								      <option value="Winter">Winter</option>
+								      <option value="All Year Round">All year round</option>
+								      </select>
+
+								    <!-- available edit new version -->
+
 									<p>Ingredients: <input class="form-control" type="text" ng-model="ctrl.beer.ingredients"></p>
 									<p>Pairs Well: <input class="form-control" type="text" ng-model="ctrl.beer.pairs_well"></p>
 									<p>Draft: <input class="form-control" type="text" ng-model="ctrl.beer.draft"></p>
-									</fieldset>
-								
-
-
-
+									
+					
 									<p>Id: <input class="form-control" type="text" ng-model="ctrl.chooseId"></p>
 
 									<button ng-click="ctrl.getAll('/api/beers/allBeers')">Get All</button>

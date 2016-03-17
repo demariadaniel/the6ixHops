@@ -39,16 +39,16 @@
 		                        	<!-- angular input element -->
 		                        	<legend>Type</legend>
 		                        	<!-- angular input element -->
-								<select id="selectbasic" name="selectbasic" class="form-control" ng-model="ctrl.update.type">
-							      <option value="IPA">IPA</option>
-							      <option value="Pilsner">Pilsner</option>
-							      <option value="Porter">Porter</option>
-							      <option value="Ale">Ale</option>
-							      <option value="Lager">Lager</option>
-							      <option value="Blonde">Blonde</option>
-							      <option value="Wheat">Wheat</option>
-							      <option value="SpecialtyBeer">Speciality Beer</option>
-							    </select>
+									<select id="selectbasic" name="selectbasic" class="form-control" ng-model="ctrl.update.type">
+								      <option value="IPA">IPA</option>
+								      <option value="Pilsner">Pilsner</option>
+								      <option value="Porter">Porter</option>
+								      <option value="Ale">Ale</option>
+								      <option value="Lager">Lager</option>
+								      <option value="Blonde">Blonde</option>
+								      <option value="Wheat">Wheat</option>
+								      <option value="SpecialtyBeer">Speciality Beer</option>
+								    </select>
 
 									<!-- angular input element -->
 									<p class="help-block"></p>
@@ -81,29 +81,13 @@
 
 							<div class="control-group form-group">
 		                        <div class="controls">
-		                        	<!-- angular input element -->
 		                        	<legend>Sizes Available</legend>
-								<input type="checkbox" name="size" value="can" ng-model="ctrl.update.sizes"> &nbsp Can<br>
-                                <input type="checkbox" name="size" value="bottle" checked ng-model="ctrl.update.sizes"> &nbsp Bottle<br>
-                                <input type="checkbox" name="size" value="braught" checked ng-model="ctrl.update.sizes"> &nbsp Draught<br>
-
-
-									<!-- angular input element -->
-									<p class="help-block"></p>
+									<input type="text" name="size" ng-model="ctrl.update.sizes"><br>
+	                                
 								</div>
 							</div>
 
-							<!-- <div class="control-group form-group">
-		                        <div class="controls">
-		                        	<!-- angular input element -->
-		                        	<!-- <label>Price</label> -->
-		                        	<!-- angular input element -->
-								<!-- <input type="text" class="form-control" id="brewery" required data-validation-required-message="Please enter the price these retail at" ng-model="ctrl.update.price"> -->
-									<!-- angular input element -->
-									<!-- <p class="help-block"></p>
-								</div>
-							</div>  -->
-
+						
 							<div class="control-group form-group">
 		                        <div class="controls">
 		                        	<!-- angular input element -->
@@ -119,11 +103,11 @@
 		                        <div class="controls">
 							  	<legend>Available</legend>
 							    <select id="selectbasic" name="selectbasic" class="form-control" ng-model="ctrl.update.available">
-							      <option value="1">Spring</option>
-							      <option value="2">Summer</option>
-							      <option value="3">Autumn</option>
-							      <option value="4">Winter</option>
-							      <option value="5">All year round</option>
+							      <option value="Spring">Spring</option>
+							      <option value="Summer">Summer</option>
+							      <option value="Autmn">Autumn</option>
+							      <option value="Winter">Winter</option>
+							      <option value="All Year Round">All year round</option>
 
 							    </select>
 							  </div>
