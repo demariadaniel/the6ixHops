@@ -15,6 +15,7 @@ angular
 				city:"",
 				province:"",
 				postcode:"",
+				description: "",
 				telephone: "",
 				email: "",
 				image_thumb: "",

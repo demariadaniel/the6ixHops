@@ -17,9 +17,9 @@
                                 <div class="thumbnail">
                                         <img class="img-responsive" ng-src="{{ctrl.newAccount.user.image}}" alt="">
                                         <div class="caption">
-                                            <h4>{{ctrl.newAccount.user.name}}<br>
+                                            <h3>{{ctrl.newAccount.user.name}}<br>
                                                 <small>Brewmaster</small>
-                                            </h4>
+                                            </h3>
                                             <p>{{ctrl.newAccount.user.email}}</p>
                                             
                                         </div>
@@ -29,9 +29,9 @@
                                 <div class="col-md-4 backgroundgrey text-center">
                                     <div class="thumbnail">
                                         <div class="caption">
-                                            <h4>{{ctrl.newAccount.brewery.name}}<br>
+                                            <h3>{{ctrl.newAccount.brewery.name}}<br>
                                                 
-                                            </h4>
+                                            </h3>
                                                  <p>{{ctrl.newAccount.brewery.street}}</p>
 
                                                  <p>{{ctrl.newAccount.brewery.description}}</p>
@@ -84,8 +84,8 @@
                     		                <div class="thumbnail" ng-repeat="beer in ctrl.dbService.newAccount.beers">
                     		                    <img class="img-responsive" ng-src="{{beer.image}}" alt="">
                     		                    <div class="caption">
-                    		                      
-                    		                            <h4>{{beer.name}}</h4>
+                    		                              
+                    		                            <h3>{{beer.name}}</h>
                                                     <!-- <p>{{ctrl.newAccount.beer.description}}</p> -->
                     		                              <p>{{beer.type}}</p>
                     		                        

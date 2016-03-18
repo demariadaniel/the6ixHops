@@ -23,7 +23,7 @@ angular
 				city:"",
 				province:"",
 				postcode:"",
-				description"",
+				description: "",
 				telephone: "",
 				email: "",
 				image_thumb: "",
@@ -189,7 +189,5 @@ angular
 			}, function(err) {
 				console.log(err);
 			})
-		}
-
-
+		};
 }
