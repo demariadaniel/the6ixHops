@@ -16,6 +16,9 @@
 				                        <div class="controls">
 
 				                   </br>     	
+
+				                   	<h4>Please enter your Brewery info</h4>
+				                   	</br>
 				                		<fieldset>
 				                        	<legend>Brewery Name</lengend>
 
@@ -97,11 +100,12 @@
 				                        <div class="controls">
 				                        	<!-- angular input element -->
 				                        	<Legend>Thumbnail Image</legend>
-				                        	<!-- form button iamge upload input ADDED BY JORDAN-->
+				                        	
 				                        	<input ngf-select name="userPhoto" accept="image/*" ngf-max-size="2MB" type="file" ng-model="ctrl.update.image_thumb">
 				                        	<br>
-											<button ng-click="ctrl.upload(ctrl.update.image_thumb, 'image_thumb')">Upload File</button>
-											<!-- form button iamge upload input  ADDED BY JORDAN-->
+				                            <p>Please make sure you press upload photo before next ; ) </p>
+											<button class="btn btn-primary btn-md" ng-click="ctrl.upload(ctrl.update.image_thumb, 'image_thumb')">Upload File</button>
+											
 											</br>
 											{{ctrl.update.image_thumb}}
 				                        <!-- 	 angular input element -->
@@ -119,14 +123,11 @@
 				                        	<!-- form button iamge upload input ADDED BY JORDAN-->
 				                        	<input ngf-select name="userPhoto" accept="image/*" ngf-max-size="2MB" type="file" ng-model="ctrl.update.image_main">
 				                        	<br>
-											<button ng-click="ctrl.upload(ctrl.update.image_main, 'image_main')">Upload File</button>
-											<!-- form button iamge upload input  ADDED BY JORDAN-->
+				                        	<p>Please make sure you press upload photo before next ; ) </p>
+											<button class="btn btn-primary btn-md" ng-click="ctrl.upload(ctrl.update.image_main, 'image_main')">Upload File</button>
 											</br>
 											{{ctrl.update.image_main}}
 
-				                        	<!-- angular input element -->
-										<!-- <input type="text" class="form-control" id="Main Brewery Shot" required data-validation-required-message="Please enter your image." ng-model="ctrl.update.image_main"> -->
-											<!-- angular input element -->
 											<p class="help-block"></p>
 										</div>
 									</div>

@@ -7,29 +7,32 @@
 		<div class="row">
 
 		        <div class="col-md-8">
-
+		        	 <br> 
+		        	 <br> 
 		        	<fieldset>
-   					 	<legend>Personal information</legend>
+		        	
+   					 	<legend>Enter Your Personal Information</legend>
 
-									<div class="control-group form-group">
-					                    <div class="controls">
-					                    	<!-- angular input element -->
-					                    	<label>Full Name</label>
-					                    	<!-- angular input element -->
-						<input type="text" class="form-control" id="Name" required data-validation-required-message="Please enter your name" ng-model="ctrl.update.name"> 
-											<!-- angular input element -->
+										<div class="control-group form-group">
+						                    <div class="controls">
+						                    	<!-- angular input element -->
+						                    	<label>Full Name</label>
+						                    	<!-- angular input element -->
+											<input type="text" class="form-control" id="Name" required data-validation-required-message="Please enter your name" ng-model="ctrl.update.name"> 
+												<!-- angular input element -->
+											</div>
 										</div>
-									</div>
 
 										<div class="control-group form-group">
 					                    <div class="controls">
 					                    <label>Photo</label>
 										<input ngf-select name="userPhoto" accept="image/*" ngf-max-size="2MB" type="file" ng-model="ctrl.update.image">
 										</br>
-										<button ng-click="ctrl.upload(ctrl.update.image)">Upload File</button>
+										<button class="btn btn-primary btn-md" ng-click="ctrl.upload(ctrl.update.image)">Upload File</button>
 										{{ctrl.update.image}}
 										</br>
 										</br>
+										<p>Please make sure you press upload photo before next ; ) </p>
 
 										<button class="btn btn-primary btn-md" ng-click="ctrl.createUser(ctrl.update)">Next</button>
 

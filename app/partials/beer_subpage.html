@@ -1,44 +1,54 @@
 <body>
-    <!-- Page Content -->
+    
     <div class="container">
 
-        <!-- Page Heading/Breadcrumbs -->
+    
         <div class="row">
             <div class="col-lg-12">
                 <h1 class="page-header">{{ctrl.beer.name}}
-                    <small>{{ctrl.beer.brewery}}</small>
+                    <!-- small>{{ctrl.beer.brewery}}</small> -->
                 </h1>
                 <ol class="breadcrumb">
                     <li><a href="index.html">Home</a>
                     </li>
-                    <li class="active">Single view page</li>
+                    <li class="active">{{ctrl.beer.name}}</li>
                 </ol>
             </div>
         </div>
-        <!-- /.row -->
+        
 
-        <!-- Portfolio Item Row -->
         <div class="row">
 
-            <div class="col-md-8">
+            <div class="col-md-4 text-center">
 
                 <div class="polaroid">
                       <p>{{ctrl.beer.name}}</p>
-                      <img src="{{ctrl.beer.image}}" width/>
+                      <img src="{{ctrl.beer.image}}"/>
                 </div>
                 
             </div>
 
             <div class="col-md-4">
-                <h1>{{ctrl.beer.name}}</h1>
-                <p>{{ctrl.beer.address}}</p>
-                <h3>Angular Address</h3>
-                <ul>
-                    <li>Lorem Ipsum</li>
-                    <li>Dolor Sit Amet</li>
-                    <li>Consectetur</li>
-                    <li>Adipiscing Elit</li>
-                </ul>
+                <h4>Brewery Of Origin</h4>
+                <p>{{ctrl.beer.brewery}}</p>
+                <h4>Description</h4>
+                <p>{{ctrl.beer.description}}</p>
+                
+
+            
+            </div>
+
+            <div class="col-md-4">
+                <h4>Ingredients</h4>
+                <p>{{ctrl.beer.ingredients}}</p>
+                <h4>Sizes Available</h4>
+                <p>{{ctrl.beer.sizes}}</p>
+                <h4>Food Pairings</h4>
+                <p>{{ctrl.beer.pairs_well}}</p>
+                <h4>ABV</h4>
+                <p>{{ctrl.beer.strength}}</p>
+
+
             </div>
 
         </div>

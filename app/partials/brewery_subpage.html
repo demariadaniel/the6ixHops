@@ -1,53 +1,68 @@
 <body>
-
-    <!-- Page Content -->
+    
     <div class="container">
 
-        <!-- Page Heading/Breadcrumbs -->
+    
         <div class="row">
             <div class="col-lg-12">
                 <h1 class="page-header">{{ctrl.brewery.name}}
-                    <small>Subheading</small>
+                    <!-- small>{{ctrl.beer.brewery}}</small> -->
                 </h1>
                 <ol class="breadcrumb">
                     <li><a href="index.html">Home</a>
                     </li>
-                    <li class="active"></li>
+                    <li class="active">{{ctrl.brewery.name}}</li>
                 </ol>
             </div>
         </div>
-        <!-- /.row -->
+        
 
-        <!-- Portfolio Item Row -->
         <div class="row">
 
-            <div class="col-md-8">
+            <div class="col-md-6">
 
-            
                 <div class="polaroid">
                       <p>{{ctrl.brewery.name}}</p>
-                      <img src="{{ctrl.brewery.image_main}}" width="500px" height="400px" />
+                      <img src="{{ctrl.brewery.image_main}}"/>
                 </div>
-             </div>         
-
-                <div class="col-md-4 text-center">
                 
-                        </br>
-
-        <!--                 <h1>Brewery Title Name</h1>
-         -->            <h1>{{ctrl.brewery.name}}</h1>
-                        <h2>Address</h2>
-                        <p>{{ctrl.brewery.street}}</p>
-                        <p>{{ctrl.brewery.city}}</p>
-                        <p>{{ctrl.brewery.province}}</p>
-                        <p>{{ctrl.brewery.postcode}}</p>
-                        
-                        <abbr title="Hours">Hours</abbr>: Monday - Sunday<ng></ng></p>
-                </div>
-                    
-                </div>
             </div>
 
+            <div class="col-md-2">
+                    <h4>Address</h4>
+                    <p>{{ctrl.brewery.street}}</p>
+                    <p>{{ctrl.brewery.city}}</p>
+                    <p>{{ctrl.brewery.province}}</p>
+                    <p>{{ctrl.brewery.postcode}}</p>
+                    
+                    <h4>Hours</h4>
+                    <p>{{ctrl.brewery.hours}}</p>
+
+                    <h4>Telephone</h4>
+                    <p>{{ctrl.brewery.telephone}}</p>
+
+                    <h4>Social</h4>
+
+                    <ul class="list-inline">
+                    <li><a ng-href="{{ctrl.newAccount.brewery.facebook}}"><i class="fa fa-2x fa-facebook-square"></i></a>
+                    </li> 
+                    <li><a ng-href="{{ctrl.newAccount.brewery.instagram}}"><i class="fa fa-2x fa-instagram"></i></a>
+                    </li>
+                    <li><a ng-href="{{ctrl.newAccount.brewery.twitter}}"><i class="fa fa-2x fa-twitter-square"></i></a>
+                    </li>
+                 </ul>
+                
+            </div>
+
+            <div class="col-md-4">
+                <h4>Description</h4>
+                <p>{{ctrl.brewery.description}}</p>
+                
+            </div>
+
+
+
         </div>
-         
-</body>
+        <!-- /.row -->
+
+</body>       

@@ -15,7 +15,22 @@ background-size.debug-router{
     font-style: normal;
 
 }
+/*breadcrumb*/
 
+h4 {font-family: 'quick_end_jerkregular', "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+.breadcrumb {
+    padding: 8px 25px;
+    margin-bottom: 20px;
+    list-style: none;
+    background-color: rgba(117, 171, 42, 0.6);
+    border-radius: 3px;
+}
 /*Home page*/
 
 /* Main page panel image bg 1, 2 & 3 */
@@ -30,7 +45,6 @@ background-size.debug-router{
 .imagebg1{
     background: url(./../img/brewerysignupblock.gif) no-repeat;
     height: 400px;
-
     background-size: contain;
     width: 100%;
 }
@@ -48,7 +62,6 @@ background-size.debug-router{
     margin-top: 20px;
     height: 500px;
 }
-
 
 /* Main page panel image bg 1, 2 & 3 */
 
@@ -188,23 +201,27 @@ legend {
 
 .polaroid {
   position: relative;
- 
+  margin:0 auto;
+  background-size: contain;
+
 }
  
 .polaroid img {
-  border: 10px solid #fff;
-  border-bottom: 45px solid #fff;
+  border: 10px solid #000;
+  border-bottom: 45px solid #000;
   -webkit-box-shadow: 3px 3px 3px #777;
      -moz-box-shadow: 3px 3px 3px #777;
           box-shadow: 3px 3px 3px #777;
+          max-width: 335px;
+
 }
  
 .polaroid p {
   position: absolute;
   text-align: center;
-  width: 100%;
+  width: 75%;
   bottom: 0px;
-  font: 400 18px/1 'Kaushan Script', cursive;
+  font: 400 18px/1 'quick_end_jerkregular', "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #888;
 }
 
@@ -417,12 +434,24 @@ text-align: center;
 /*    margin-left: 80px;
 */}
 
-/*/*responsive form edit width*/
 
-/*@media(max-width: 400px){
-.row-centered-responsive {
-    text-align:center;
-}*/
+
+@media(max-width: 400px){
+.polaroid img {
+    border: 10px solid #fff;
+    border-bottom: 45px solid #fff;
+    -webkit-box-shadow: 3px 3px 3px #777;
+    -moz-box-shadow: 3px 3px 3px #777;
+    box-shadow: 3px 3px 3px #777;
+    background-size: contain;
+    max-width: 375px;
+}
+
+@media(max-width: 400px){
+    .col-md-6{
+        text-align: center;
+
+    }
 
 /*@media(max-width: 400px){
 .col-centered-responsive {

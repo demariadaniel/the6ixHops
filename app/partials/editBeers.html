@@ -7,6 +7,9 @@
 <div class="container">
 
 	<div class="row">
+		<br>
+		<h4>Add your beers</h4>
+		<br>
 	        <div class="col-md-8">
 					<form name="sentMessage" id="contactForm" novalidate>
 
@@ -62,7 +65,8 @@
 
 		                        	<input ngf-select name="beerPhoto" accept="image/*" ngf-max-size="2MB" type="file" ng-model="ctrl.update.image">
 		                        	</br>
-									<button ng-click="ctrl.upload(ctrl.update.image)">Upload File</button>
+		                        	<p>Please make sure you press upload photo before next ; ) </p>
+									<button class="btn btn-primary btn-md" ng-click="ctrl.upload(ctrl.update.image)">Upload File</button>
 									{{ctrl.update.image}}
 								</div>
 							</div>
