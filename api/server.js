@@ -10,8 +10,8 @@ app.use(express.static(__dirname + './../app'));
 app.use(bodyParser());
 app.use(bodyParser.urlencoded({extended:false}));
 
-app.listen(8080, function(){
-	console.log("Listening on Port 8080, Stop with Ctrl+C");
+app.listen(80, function(){
+	console.log("Listening on Port 80, Stop with Ctrl+C");
 });
 // =============================================================
 //image upload storage details // added by jordan 
