@@ -109,7 +109,7 @@ legend {
   
 }
 
-/*log in page input fields */
+/*log in page input fields & gCaptcha */
 
 .form-control-login {
     max-width: 330px;
@@ -146,6 +146,11 @@ legend {
     position: absolute;
     bottom: 130px;
     left: 100px;
+}
+
+.gcapLeft {
+    display: inline-block;
+    left: 5vw;
 }
 
 /*main home page slider below*/

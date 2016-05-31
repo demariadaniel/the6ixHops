@@ -16,6 +16,7 @@ angular
 			};
 
 			ctrl.auth_btn = 'Login';
+			ctrl.key = "6Ldx4hoTAAAAAPv4QeVSHLQIKD1dgyW942bKhUJE";
 			
 			ctrl.register_btn = "Sign Up";
 			ctrl.register = register;
@@ -46,6 +47,27 @@ angular
 		}
 
 		function authenticate(user){
+			recapToken = grecaptcha.getResponse();
+			if (user.recapToken == "") {
+				alert ('Complete Captcha first!');
+				return;
+			}
+
+			var captcha = {
+				secret: ctrl.key,
+				response: recapToken
+			}
+
+			$http.post('https://www.google.com/recaptcha/api/siteverify', captcha)
+				.then(function(res){
+					console.log(res)
+				}, function(err){
+					console.log(err)
+				}
+				);
+
+				return;
+
 			if (user.email === "Senor@Buddy") {$state.go('superuser')};
 			user = JSON.stringify(user);
 			$http.post('/api/auth/authenticate',user)
