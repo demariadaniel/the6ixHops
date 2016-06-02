@@ -1,5 +1,5 @@
 angular
-	.module('app',['ui.router', 'angular-jwt', 'ngFileUpload'])
+	.module('app',['ui.router', 'angular-jwt', 'ngFileUpload', 'vcRecaptcha'])
 	.config(function($stateProvider, $urlRouterProvider, $httpProvider){
 
 		$urlRouterProvider.otherwise('/home');

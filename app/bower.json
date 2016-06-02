@@ -18,6 +18,7 @@
   "dependencies": {
     "angular-animate": "^1.5.0",
     "angular-touch": "^1.5.0",
-    "ng-file-upload": "^12.0.4"
+    "ng-file-upload": "^12.0.4",
+    "angular-recaptcha": "^3.0.3"
   }
 }
